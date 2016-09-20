@@ -1,0 +1,12 @@
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\BookWorm.Data.dll.config
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\BookWorm.Data.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\BookWorm.Data.pdb
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\BookWorm.Models.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\EntityFramework.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\BookWorm.Models.pdb
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\EntityFramework.xml
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.csprojResolveAssemblyReference.cache
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.pdb

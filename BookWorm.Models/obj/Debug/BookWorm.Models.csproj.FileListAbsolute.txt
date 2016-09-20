@@ -1,0 +1,4 @@
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.pdb
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.dll
+c:\Users\boncho\documents\visual studio 2015\Projects\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.pdb
