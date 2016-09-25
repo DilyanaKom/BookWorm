@@ -23,6 +23,7 @@ namespace BookWorm.Controllers
     {
 
         [HttpPost, ActionName("logout")]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public HttpResponseMessage LogoutUser([ValueProvider(typeof(HeaderValueProviderFactory<string>))] string token)
         {
             if (ValidateToken(token))

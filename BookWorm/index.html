@@ -9,17 +9,56 @@
 </head>
 <body>
     <script>
-        //var headers = {
-        //    "X-sessionKey": localStorage.getItem("sessionKey")
-        //};
+     
+
+
+        //http://bookworm-1.apphb.com/api/user/Register
+        //http://bookworm-1.apphb.com/api/user/Login
+        ////http://bookworm-1.apphb.com/api/user/Logout
+
         $(function () {
+
+            //example of get request, no auth
             httpRequester.getJSON("http://bookworm-1.apphb.com/api/Work/GetAllWorks")
             .then(function (result) {
                 console.log(result.data);
             }, function (e) {
                 console.log(e);
-            })
+            });
+
+
+            //example of post request, no auth
+            //var user =
+            //    {
+            //        Username: "sashi123",
+            //        Password: "gosho",
+            //        ConfirmPassword:"gosho"
+            //    };
+            //httpRequester.postJSON("http://bookworm-1.apphb.com/api/user/Register", user)
+            //.then(function (result) {
+            //    console.log(result.data);
+            //}, function (e) {
+            //    console.log(e);
+            //});
+
+            //example of post request, with auth
+
+            var headers = {
+            "X-token": "945aed2f-952a-4bee-9fcf-c1d90805272b" //localStorage.getItem("token")
+            };
+           
+            httpRequester.postJSON("http://bookworm-1.apphb.com/api/user/Logout", null, headers)
+            .then(function (result) {
+                console.log(result.Success);
+            }, function (e) {
+                console.log(e);
+            });
+
         });
+
+
+
+
     </script>
 </body>
 </html>
