@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.ValueProviders;
 
 namespace BookWorm.Controllers
@@ -60,6 +61,7 @@ namespace BookWorm.Controllers
 
 
         [HttpPost]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public HttpResponseMessage AddWorkNoAuthentication(WorkCreateViewModel work)
         {
             try
@@ -91,6 +93,7 @@ namespace BookWorm.Controllers
 
 
         [HttpGet]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public HttpResponseMessage GetAllWorks()
         {
             try

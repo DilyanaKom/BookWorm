@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/libs/rspv.min.js"></script>
+    <script src="scripts/app/httpRequester.js"></script>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        $(function () {
+            httpRequester.getJSON("http://bookworm-1.apphb.com/api/Work/GetAllWorks")
+            .then(function (result) {
+                console.log(result.data);
+            }, function (e) {
+                console.log(e);
+            })
+        });
+    </script>
+</body>
+</html>

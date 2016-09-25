@@ -96,3 +96,6 @@ C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\bin\System.Web.Http.WebHost
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\obj\Debug\BookWorm.csprojResolveAssemblyReference.cache
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\obj\Debug\BookWorm.dll
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\obj\Debug\BookWorm.pdb
+C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\bin\System.Web.Cors.dll
+C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\bin\System.Web.Http.Cors.dll
+C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm\bin\System.Web.Http.Cors.xml
