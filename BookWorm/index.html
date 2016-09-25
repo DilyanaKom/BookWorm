@@ -9,6 +9,9 @@
 </head>
 <body>
     <script>
+        //var headers = {
+        //    "X-sessionKey": localStorage.getItem("sessionKey")
+        //};
         $(function () {
             httpRequester.getJSON("http://bookworm-1.apphb.com/api/Work/GetAllWorks")
             .then(function (result) {

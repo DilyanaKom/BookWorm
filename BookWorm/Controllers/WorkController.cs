@@ -60,6 +60,7 @@ namespace BookWorm.Controllers
 
 
 
+
         [HttpPost]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         public HttpResponseMessage AddWorkNoAuthentication(WorkCreateViewModel work)

@@ -17,7 +17,7 @@ namespace BookWorm.Data
 
 
 
-        public IDbSet<User> Settings
+        public IDbSet<User> Users
         {
             get;
             set;

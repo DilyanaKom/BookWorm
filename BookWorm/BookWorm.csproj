@@ -142,13 +142,17 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WorkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Headers\HeaderValueProvider.cs" />
     <Compile Include="Headers\HeaderValueProviderFactory.cs" />
+    <Compile Include="Infrastructure\Encryptor.cs" />
     <Compile Include="Infrastructure\JsonContent.cs" />
+    <Compile Include="Models\LoginUserViewModel.cs" />
+    <Compile Include="Models\RegisterUserViewModel.cs" />
     <Compile Include="Models\WorkCreateViewModel.cs" />
     <Compile Include="Models\WorkViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

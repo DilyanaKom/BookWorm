@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookWorm.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,33 @@ namespace BookWorm.Controllers
     public class BaseApiController : ApiController
     {
 
-      
+        protected bool ValidateToken(string token)
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var tokenDb = db.Tokens.FirstOrDefault(s => s.Value == token);
+                if (tokenDb==null)
+                {
+                    return false;
+                }
+                else
+                {
+                    if (!tokenDb.IsValid)
+                    {
+                        return false;
+                    }
+                    else if(tokenDb.Expire.Date < DateTime.Now.Date)
+                    {
+                        tokenDb.IsValid = false;
+                        db.SaveChanges();
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
     }
 }
