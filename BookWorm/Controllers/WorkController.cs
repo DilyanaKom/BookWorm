@@ -59,7 +59,7 @@ namespace BookWorm.Controllers
 
 
         [HttpGet]
-        public HttpResponseMessage GetAllWorks(int? genreId)
+        public HttpResponseMessage GetAllWorks()
         {
             try
             {
