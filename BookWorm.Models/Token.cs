@@ -13,5 +13,11 @@ namespace BookWorm.Models
         public string Value { get; set; }
 
         public DateTime Expire { get; set; }
+
+        public int UserId { get; set; }
+
+        public virtual User User { get; set; }
+
+        public bool IsValid { get; set; }
     }
 }

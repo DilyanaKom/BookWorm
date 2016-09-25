@@ -58,6 +58,38 @@ namespace BookWorm.Controllers
         //,[ValueProvider(typeof(HeaderValueProviderFactory<string>))] string sessionToken
 
 
+
+        [HttpPost]
+        public HttpResponseMessage AddWorkNoAuthentication(WorkCreateViewModel work)
+        {
+            try
+            {
+                Work newWork = new Work();
+                newWork.Body = work.Body;
+                newWork.Genre = work.Genre;
+                newWork.CoverPhoto = work.CoverPhoto;
+                newWork.Title = work.Title;
+
+                using (ApplicationDbContext db = new ApplicationDbContext())
+                {
+                    db.Works.Add(newWork);
+                    db.SaveChanges();
+
+
+                    return new HttpResponseMessage() { Content = new JsonContent(new { Success = true, data = newWork.Id }) };
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return new HttpResponseMessage() { Content = new JsonContent(new { Success = false, Message = ex.Message }) };
+
+            }
+        }
+
+
         [HttpGet]
         public HttpResponseMessage GetAllWorks()
         {

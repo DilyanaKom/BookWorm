@@ -133,6 +133,7 @@
     <Compile Include="Headers\HeaderValueProvider.cs" />
     <Compile Include="Headers\HeaderValueProviderFactory.cs" />
     <Compile Include="Infrastructure\JsonContent.cs" />
+    <Compile Include="Models\WorkCreateViewModel.cs" />
     <Compile Include="Models\WorkViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
