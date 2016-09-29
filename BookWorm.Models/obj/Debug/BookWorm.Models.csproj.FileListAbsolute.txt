@@ -7,3 +7,8 @@ C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm.Models\bin\Debug\BookWorm.M
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.dll
 C:\Users\dilyana\Documents\JS Apps\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.pdb
+D:\Iztegleni!!!\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.dll
+D:\Iztegleni!!!\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.pdb
+D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
+D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.dll
+D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.pdb
