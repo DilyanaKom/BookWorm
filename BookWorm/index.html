@@ -2,72 +2,14 @@
 <html>
 <head>
     <title>Test</title>
-    <link rel="stylesheet" href="public/bower_components/bootstrap/dist/css/bootstrap.css"> 
-	  <meta charset="utf-8" />
+    <link rel="stylesheet" href="public/bower_components/bootstrap/dist/css/bootstrap.css">
+    <meta charset="utf-8" />
 </head>
 <body>
     <!--libs-->
     <script src="scripts/jquery-3.1.0.min.js"></script>
     <script src="scripts/libs/rspv.min.js"></script>
     <script src="scripts/app/httpRequester.js"></script>
-<<<<<<< HEAD
-	<meta charset="utf-8" />
-</head>
-<body>
-    <script>
-     
-
-
-        //http://bookworm-1.apphb.com/api/user/Register
-        //http://bookworm-1.apphb.com/api/user/Login
-        ////http://bookworm-1.apphb.com/api/user/Logout
-
-        $(function () {
-
-            //example of get request, no auth
-            httpRequester.getJSON("http://bookworm-1.apphb.com/api/Work/GetAllWorks")
-            .then(function (result) {
-                console.log(result.data);
-            }, function (e) {
-                console.log(e);
-            });
-
-
-            //example of post request, no auth
-
-            //var user =
-            //    {
-            //        Username: "sashi123",
-            //        Password: "gosho",
-            //        ConfirmPassword:"gosho"
-            //    };
-            //httpRequester.postJSON("http://bookworm-1.apphb.com/api/user/Register", user)
-            //.then(function (result) {
-            //    console.log(result.data);
-            //}, function (e) {
-            //    console.log(e);
-            //});
-
-            //example of post request, with auth
-
-            var headers = {
-            "X-token": "945aed2f-952a-4bee-9fcf-c1d90805272b" //localStorage.getItem("token")
-            };
-           
-            httpRequester.postJSON("http://bookworm-1.apphb.com/api/user/Logout", null, headers)
-            .then(function (result) {
-                console.log(result.Success);
-            }, function (e) {
-                console.log(e);
-            });
-
-        });
-
-
-
-
-    </script>
-=======
     <script src="public/bower_components/sammy/lib/sammy.js"></script>
     <script src="public/bower_components/jquery/dist/jquery.js"></script>
     <script src="public/bower_components/handlebars/handlebars.js"></script>
@@ -76,34 +18,33 @@
 
     <script src="js/data.js"></script>
     <script src="js/templates.js"></script>
-    
+
     <div id="root">
-    <header>
-      <div class="container">
-        <div class="row">
-          <h1 class="col-md-9">Bookworm</h1>
-          <div id='login-controls' class="col-md-3">
-            <a id="btn-go-to-login" class="btn btn-default"href="#/login">Login</a>
-            <a id="btn-go-to-register" class="btn btn-default"href="#/register">Register</a>
-            <button id="btn-logout" class="btn btn-default">Logout</button>
-          </div>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <h1 class="col-md-9">Bookworm</h1>
+                    <div id='login-controls' class="col-md-3">
+                        <a id="btn-go-to-login" class="btn btn-default" href="#/login">Login</a>
+                        <a id="btn-go-to-register" class="btn btn-default" href="#/register">Register</a>
+                        <button id="btn-logout" class="btn btn-default">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/books"><h3>Library</h3></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+
         </div>
-      </div>
-      <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-          <li>
-              <a href="#/books"><h3>Library</h3></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="content">
-
     </div>
-  </div> 
 
-  <script src="js/app.js"></script>
-  
->>>>>>> origin/master
+    <script src="js/app.js"></script>
+
 </body>
 </html>
