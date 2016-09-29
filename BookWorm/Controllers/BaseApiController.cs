@@ -1,4 +1,5 @@
 ﻿using BookWorm.Data;
+using BookWorm.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,15 @@ namespace BookWorm.Controllers
 {
     public class BaseApiController : ApiController
     {
+
+        protected User GetUserByToken(string token)
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            { 
+                var tokenDb = db.Tokens.FirstOrDefault(s => s.Value == token);
+                return tokenDb.User;
+            }
+        }
 
         protected bool ValidateToken(string token)
         {
