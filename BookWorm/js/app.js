@@ -1,5 +1,5 @@
 import { data } from 'data';
-import { templatesCompilator } from 'templates';
+import { templatesCompilator } from 'templates-compilator';
 
 const sammyApp = Sammy('#content', function() {
     let $content = $('#content');
@@ -13,14 +13,9 @@ const sammyApp = Sammy('#content', function() {
             return;
         }
 
-        $content.html(`<h1>Login Form</h1>
-
-            <input placeholder="Username" type="text" class="form-control" id="tb-user" style="width:300px" />
-            <input placeholder="Password" type="text" class="form-control" id="tb-pass" style="width:300px"/>
-
-            <div class="row">
-            <button id="btn-login" class="btn btn-default col-sm-2 ">Login</button>
-            </div>`);
+        templatesCompilator.get('login').then((template) => {
+            $content.html(template());
+        });
 
         $("#btn-login").on("click", function() {
 
@@ -34,8 +29,7 @@ const sammyApp = Sammy('#content', function() {
                     document.location.reload(true);
                 });
         });
-    })
-
+    });
 
     this.get('#/register', function(context) {
         if (data.users.current()) {
@@ -43,15 +37,9 @@ const sammyApp = Sammy('#content', function() {
             return;
         }
 
-        $content.html(`<h1>Register Form</h1>
-
-            <input placeholder="Username" type="text" class="form-control" id="tb-user" style="width:300px" />
-            <input placeholder="Password" type="text" class="form-control" id="tb-pass" style="width:300px"/>
-            <input placeholder="Confirm Password" type="text" class="form-control" id="tb-conf-pass" style="width:300px"/>
-
-            <div class="row">
-            <button id="btn-register" class="btn btn-default col-sm-2 ">Register</button>
-            </div>`);
+        templatesCompilator.get('register').then((template) => {
+            $content.html(template());
+        });
 
 
         $("#btn-register").on("click", function() {
