@@ -1,9 +1,9 @@
-var data = (function() {
+const data = (function() {
 
   const DATA_STORAGE_KEY = 'token';
 
   function userLogin(user){
-    var promise = new Promise(function(resolve, reject){
+    let promise = new Promise(function(resolve, reject){
     // TO DO: Encrypt password!!!
 
     //   var reqUser={
@@ -32,7 +32,7 @@ var data = (function() {
   }
 
   function userRegister(user){
-    var promise = new Promise(function(resolve, reject){
+    let promise = new Promise(function(resolve, reject){
     // TO DO: Encrypt!!
 
     //   var reqUser={
@@ -62,7 +62,7 @@ var data = (function() {
   }
 
   function userLogout(){
-    var promise = new Promise(function(resolve, reject){
+    let promise = new Promise(function(resolve, reject){
       localStorage.removeItem(DATA_STORAGE_KEY);
       resolve();
     });
@@ -70,7 +70,7 @@ var data = (function() {
   }
 
   function getCurrentUser(){
-    var token = localStorage.getItem(DATA_STORAGE_KEY);
+    let token = localStorage.getItem(DATA_STORAGE_KEY);
     if(!token){
       return null;
     }
@@ -95,3 +95,5 @@ var data = (function() {
     // }
   };
 }());
+
+export { data };

@@ -1,7 +1,6 @@
 {
   "name": "research-simple-forum",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,10 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.13.3",
-    "express": "^4.13.3"
-  }
+    "express": "^4.13.3",
+    "systemjs": "^0.19.39",
+    "systemjs-plugin-babel": "0.0.15"
+  },
+  "devDependencies": {},
+  "description": ""
 }

@@ -34,3 +34,15 @@ D:\Iztegleni!!!\BookWorm\BookWorm.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Iztegleni!!!\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.csprojResolveAssemblyReference.cache
 D:\Iztegleni!!!\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.dll
 D:\Iztegleni!!!\BookWorm\BookWorm.Data\obj\Debug\BookWorm.Data.pdb
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\BookWorm.Data.dll.config
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\BookWorm.Data.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\BookWorm.Data.pdb
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\BookWorm.Models.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\EntityFramework.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\BookWorm.Models.pdb
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\EntityFramework.xml
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\obj\Debug\BookWorm.Data.csprojResolveAssemblyReference.cache
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\obj\Debug\BookWorm.Data.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Data\obj\Debug\BookWorm.Data.pdb

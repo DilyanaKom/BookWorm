@@ -12,3 +12,8 @@ D:\Iztegleni!!!\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.pdb
 D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
 D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.dll
 D:\Iztegleni!!!\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.pdb
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\bin\Debug\BookWorm.Models.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\bin\Debug\BookWorm.Models.pdb
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.dll
+C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.pdb

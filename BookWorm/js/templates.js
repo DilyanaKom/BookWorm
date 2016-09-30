@@ -1,16 +1,18 @@
 //TO DO
-var templates = (function() {
-  var handlebars = window.handlebars || window.Handlebars,
+const templatesCompilator = (function() {
+  let handlebars = window.handlebars || window.Handlebars,
     Handlebars = window.handlebars || window.Handlebars;
 
-  function get(name) {
-    var promise = new Promise(function(resolve, reject) {
-      var url = `/templates/${name}.handlebars`;
+  function get(templateName) {
+    let promise = new Promise(function(resolve, reject) {
+      let url = `/templates/${templateName}.handlebars`;
+
       $.get(url, function(templateHtml) {
-        var template = handlebars.compile(templateHtml);
+        let template = handlebars.compile(templateHtml);
         resolve(template);
       });
     });
+
     return promise;
   }
 
@@ -18,3 +20,5 @@ var templates = (function() {
     get
   };
 }());
+
+export { templatesCompilator };
