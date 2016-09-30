@@ -1,5 +1,5 @@
-//TO DO
-var templates = (function() {
+
+const templates = (function() {
   var handlebars = window.handlebars || window.Handlebars,
     Handlebars = window.handlebars || window.Handlebars;
 
