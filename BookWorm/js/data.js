@@ -4,12 +4,6 @@ const data = (function() {
 
   function userLogin(user){
     let promise = new Promise(function(resolve, reject){
-    // TO DO: Encrypt password!!!
-
-    //   var reqUser={
-    //     username: user.username,
-    //     passHash: CryptoJS.SHA1(user.password).toString()
-    //   }
 
       $.ajax({
         url: "http://bookworm-1.apphb.com/api/user/Login",
@@ -33,13 +27,7 @@ const data = (function() {
 
   function userRegister(user){
     let promise = new Promise(function(resolve, reject){
-    // TO DO: Encrypt!!
 
-    //   var reqUser={
-    //     username: user.username,
-    //     passHash: CryptoJS.SHA1(user.password).toString(),
-    //     confPassHash: CryptoJS.SHA1(user.password).toString()
-    //   }
       $.ajax({
         url: "http://bookworm-1.apphb.com/api/user/Register",
         method: "POST",
@@ -79,8 +67,6 @@ const data = (function() {
     };
   }
 
-
-
   return {
     users: {
       login: userLogin,
@@ -95,5 +81,3 @@ const data = (function() {
     // }
   };
 }());
-
-export { data };
