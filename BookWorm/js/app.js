@@ -1,7 +1,25 @@
 const sammyApp = Sammy('#content', function () {
     var $content = $('#content');
+
     this.get("#/", function () {
-        this.redirect("#/books");
+        if (data.users.current()) {
+            this.redirect("#/books");
+            return;
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get("#/home", function () {
+        if (data.users.current()) {
+            this.redirect("#/books");
+            return;
+        }
+
+        templates.get('home')
+        .then(function (template) {
+            $content.html(template());
+        });
     });
 
     this.get('#/login', function (context) {
@@ -57,10 +75,10 @@ const sammyApp = Sammy('#content', function () {
 $(function () {
     sammyApp.run('/#');
     if (data.users.current()) {
-        $("#btn-go-to-login").addClass("hidden");
-        $("#btn-go-to-register").addClass("hidden");
+        $("#btn-go-to-login").addClass("hide");
+        $("#btn-go-to-register").addClass("hide");
     } else {
-        $("#btn-logout").addClass("hidden");
+        $("#btn-logout").addClass("hide");
     }
 
     $("#btn-logout").on("click", function () {
