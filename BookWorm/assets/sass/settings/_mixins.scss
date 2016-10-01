@@ -25,6 +25,12 @@
     transition: $property $duration $easing;
 }
 
+@mixin box-shadow($h, $v, $blur, $spread, $color) {
+    -webkit-box-shadow: $h $v $blur $spread $color;
+    -moz-box-shadow: $h $v $blur $spread $color;
+    box-shadow: $h $v $blur $spread $color;
+}
+
 @mixin navbar($navbar-height, $gutter-between-links, $logo-gutter, $background-color, $link-opacity) {
     height: $navbar-height;
     background-color: $background-color;

@@ -361,11 +361,19 @@ section {
     background-color: rgba(0, 0, 0, 0.03) !important;
     box-shadow: none;
     color: rgba(154, 158, 168, 0.5);
-    text-transform: none; }
+    text-transform: none;
+    -moz-transition: box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out; }
     .btn.grey i {
       color: #9a9ea8;
       vertical-align: middle;
       margin-right: 10px; }
+    .btn.grey:hover, .btn.grey:active, .btn.grey:focus {
+      -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16); }
   .btn.round {
     border-radius: 50px; }
 

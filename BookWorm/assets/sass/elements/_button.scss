@@ -33,11 +33,18 @@
         box-shadow: none;
         color: transparentize($light-grey, .5);
         text-transform: none;
+        @include transition(box-shadow, .2s, ease-in-out);
 
         i {
             color: $light-grey;
             vertical-align: middle;
             margin-right: $margin-xs;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            @include box-shadow(0, 5px, 10px, 0, transparentize($black, .84));
         }
     }
 
