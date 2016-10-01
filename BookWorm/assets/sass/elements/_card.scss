@@ -1,0 +1,122 @@
+﻿.card {
+    border-radius: 0;
+
+    &.horizontal {
+        margin: 0 0 $margin-sm + 10px 0;
+        height: 190px;
+        text-align: left;
+
+        .card-image {
+            width: 125px;
+            max-width: 125px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 20px;
+
+            .card-title {
+                line-height: normal;
+                margin-bottom: $margin-sm;
+            }
+
+            .desc {
+                color: $light-grey;
+                font-size: 1.2rem;
+            }
+        }
+
+        .card-action {
+            padding: 20px 10px 20px 20px;
+
+            a:not(.btn):not(.btn-large):not(.btn-floating) {
+                color: $light-grey;
+                text-transform: none;
+                margin: 0;
+            }
+
+            .like {
+                border: 0;
+                border-radius: 0;
+                background-color: transparent;
+                box-shadow: none;
+                color: $light-grey;
+                padding: 5px 0;
+                font-size: 1.2rem;
+                line-height: normal;
+                height: auto;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    i.icon-like-full {
+                        opacity: 1;
+                    }
+
+                    i.icon-like-o {
+                        opacity: 0;
+                    }
+
+                    .number-likes {
+                        color: $red;
+                    }
+                }
+
+                .number-likes {
+                    vertical-align: top;
+                    @include transition(color, .2s, ease-in-out);
+                }
+
+                .icons {
+                    display: inline-block;
+                    width: 13.5px;
+                    height: 13px;
+                    position: relative;
+
+                    .icon-like-o,
+                    .icon-like-full {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .icon-like-o {
+                        opacity: 1;
+                        @include transition(opacity, .2s, ease-in-out);
+                    }
+
+                    .icon-like-full {
+                        color: $red;
+                        opacity: 0;
+                        @include transition(opacity, .2s, ease-in-out);
+                    }
+                }
+            }
+
+            .read-more {
+                padding: 5px 0;
+                font-size: 1.2rem;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    i {
+                        margin-left: $margin-xs - 5px;
+                        margin-right: 5px;
+                    }
+                }
+
+                i {
+                    font-size: .8rem;
+                    margin-right: $margin-xs;
+                    @include transition(margin, .2s, ease-in-out);
+                }
+
+                span {
+                    margin-right: $margin-xs;
+                }
+            }
+        }
+    }
+}

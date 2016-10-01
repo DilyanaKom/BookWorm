@@ -6,3 +6,9 @@ body {
     font-family: 'Karla';
     font-size: 1.6rem;
 }
+
+.row {
+    .col {
+        padding: 0 1.5rem;
+    }
+}

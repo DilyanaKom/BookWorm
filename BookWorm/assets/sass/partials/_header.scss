@@ -18,6 +18,10 @@
             @include navbar($app-navbar-height, 0, 0, $white, 1);
             border-bottom: 1px solid $semi-grey;
 
+            .container {
+                height: 100%;
+            }
+
             ul {
                 margin-right: -$margin-xs;
 

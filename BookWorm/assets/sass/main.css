@@ -100,6 +100,9 @@ body {
   font-family: 'Karla';
   font-size: 1.6rem; }
 
+.row .col {
+  padding: 0 1.5rem; }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -205,6 +208,8 @@ header {
       header#app nav .brand-logo img {
         display: block;
         height: 100px; }
+    header#app nav .container {
+      height: 100%; }
     header#app nav ul {
       margin-right: -10px; }
       header#app nav ul li {
@@ -257,6 +262,8 @@ header {
     font-size: 3.5rem; }
   .heading.small {
     font-size: 2.1rem; }
+  .heading.mini {
+    font-size: 1.8rem; }
   .heading.serif {
     font-family: 'Karla'; }
 
@@ -336,4 +343,90 @@ section {
       text-align: center;
       left: 0;
       right: 0; }
+
+.card {
+  border-radius: 0; }
+  .card.horizontal {
+    margin: 0 0 30px 0;
+    height: 190px;
+    text-align: left; }
+    .card.horizontal .card-image {
+      width: 125px;
+      max-width: 125px;
+      background-size: cover;
+      background-position: center; }
+    .card.horizontal .card-content {
+      padding: 20px; }
+      .card.horizontal .card-content .card-title {
+        line-height: normal;
+        margin-bottom: 20px; }
+      .card.horizontal .card-content .desc {
+        color: #9a9ea8;
+        font-size: 1.2rem; }
+    .card.horizontal .card-action {
+      padding: 20px 10px 20px 20px; }
+      .card.horizontal .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+        color: #9a9ea8;
+        text-transform: none;
+        margin: 0; }
+      .card.horizontal .card-action .like {
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        color: #9a9ea8;
+        padding: 5px 0;
+        font-size: 1.2rem;
+        line-height: normal;
+        height: auto; }
+        .card.horizontal .card-action .like:hover i.icon-like-full, .card.horizontal .card-action .like:active i.icon-like-full, .card.horizontal .card-action .like:focus i.icon-like-full {
+          opacity: 1; }
+        .card.horizontal .card-action .like:hover i.icon-like-o, .card.horizontal .card-action .like:active i.icon-like-o, .card.horizontal .card-action .like:focus i.icon-like-o {
+          opacity: 0; }
+        .card.horizontal .card-action .like:hover .number-likes, .card.horizontal .card-action .like:active .number-likes, .card.horizontal .card-action .like:focus .number-likes {
+          color: #ff7473; }
+        .card.horizontal .card-action .like .number-likes {
+          vertical-align: top;
+          -moz-transition: color 0.2s ease-in-out;
+          -o-transition: color 0.2s ease-in-out;
+          -webkit-transition: color 0.2s ease-in-out;
+          transition: color 0.2s ease-in-out; }
+        .card.horizontal .card-action .like .icons {
+          display: inline-block;
+          width: 13.5px;
+          height: 13px;
+          position: relative; }
+          .card.horizontal .card-action .like .icons .icon-like-o,
+          .card.horizontal .card-action .like .icons .icon-like-full {
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .card.horizontal .card-action .like .icons .icon-like-o {
+            opacity: 1;
+            -moz-transition: opacity 0.2s ease-in-out;
+            -o-transition: opacity 0.2s ease-in-out;
+            -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out; }
+          .card.horizontal .card-action .like .icons .icon-like-full {
+            color: #ff7473;
+            opacity: 0;
+            -moz-transition: opacity 0.2s ease-in-out;
+            -o-transition: opacity 0.2s ease-in-out;
+            -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out; }
+      .card.horizontal .card-action .read-more {
+        padding: 5px 0;
+        font-size: 1.2rem; }
+        .card.horizontal .card-action .read-more:hover i, .card.horizontal .card-action .read-more:active i, .card.horizontal .card-action .read-more:focus i {
+          margin-left: 5px;
+          margin-right: 5px; }
+        .card.horizontal .card-action .read-more i {
+          font-size: .8rem;
+          margin-right: 10px;
+          -moz-transition: margin 0.2s ease-in-out;
+          -o-transition: margin 0.2s ease-in-out;
+          -webkit-transition: margin 0.2s ease-in-out;
+          transition: margin 0.2s ease-in-out; }
+        .card.horizontal .card-action .read-more span {
+          margin-right: 10px; }
 
