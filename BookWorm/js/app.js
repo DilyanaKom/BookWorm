@@ -92,10 +92,18 @@ const sammyApp = Sammy('#main-content', function () {
           });
       });
     });
+
+    this.get('#/logout', function (context) {
+        data.users.logout()
+        .then(function () {
+            location = '#/';
+            document.location.reload(true);
+        });
+    });
 });
 
 $(function () {
-    sammyApp.run('/#');
+    sammyApp.run('/#/home');
     if (data.users.current()) {
         $("#btn-go-to-login").addClass("hide");
         $("#btn-go-to-register").addClass("hide");
