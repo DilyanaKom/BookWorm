@@ -1,14 +1,21 @@
 ﻿.btn {
-    border-radius: 50px;
     display: inline-block;
     height: $button-height;
+    line-height: $button-height;
     font-size: 1.2rem;
-    padding: 0 $margin-sm;
+    border-radius: 0;
+
+    &.wide {
+        padding: 0 $margin-sm;
+    }
+
+    &.normal {
+        padding: 0 $margin-xs;
+    }
 
     &.line {
         &.black-and-white {
             border: 1px solid $white;
-            line-height: $button-height;
             background-color: transparent;
             box-shadow: none;
 
@@ -19,5 +26,22 @@
                 border-color: $dark-grey;
             }
         }
+    }
+
+    &.grey {
+        background-color: transparentize($black, .97) !important;
+        box-shadow: none;
+        color: transparentize($light-grey, .5);
+        text-transform: none;
+
+        i {
+            color: $light-grey;
+            vertical-align: middle;
+            margin-right: $margin-xs;
+        }
+    }
+
+    &.round {
+        border-radius: 50px;
     }
 }

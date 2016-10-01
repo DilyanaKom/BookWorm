@@ -4,6 +4,35 @@
     text-align: center;
     background-color: $white;
 
+    &#app-section {
+        text-align: left;
+        background-color: $super-light-grey;
+
+        .heading {
+            margin-bottom: $margin-sm;
+        }
+
+        .header {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: $margin-md + 10px;
+            display: flex;
+            flex-direction: row;
+
+            .left {
+                flex: 1;
+            }
+
+            .right {
+                align-self: center;
+            }
+        }
+    }
+
+    &.sm {
+        padding: $margin-md + 10px 0;
+    }
+
     h1.heading {
         margin-bottom: $margin-xl;
     }
@@ -11,5 +40,11 @@
     .desc {
         font-size: 1.6rem;
         color: $light-grey;
+    }
+
+    .sub-heading {
+        color: $light-grey;
+        font-size: 1.2rem;
+        text-transform: uppercase;
     }
 }

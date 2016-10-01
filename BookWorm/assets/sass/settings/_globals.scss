@@ -7,8 +7,12 @@ body {
     font-size: 1.6rem;
 }
 
-.row {
-    .col {
-        padding: 0 1.5rem;
+.container {
+    .row {
+        margin: 0 -1.5rem;
+
+        .col {
+            padding: 0 1.5rem;
+        }
     }
 }

@@ -8,7 +8,7 @@ $margin-xs: 10px;
 $margin-sm: $margin-xs * 2;
 $margin-md: $margin-sm * 2;
 $margin-lg: $margin-md * 2;
-$margin-xl: $margin-lg + $margin-md;
+$margin-xl: $margin-lg + $margin-sm;
 
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         30px !default;
