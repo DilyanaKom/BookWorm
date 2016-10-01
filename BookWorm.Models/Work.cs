@@ -7,10 +7,12 @@ namespace BookWorm.Models
 
         public Work()
         {
-             this.Comments = new HashSet<Comment>();
+            this.Comments = new HashSet<Comment>();
             this.Tags = new HashSet<Tag>();
+            this.Chapters = new HashSet<string>();
         }
         public int Id { get; set; }
+
         public string Title { get; set; }
 
         public string Body { get; set; }
@@ -26,5 +28,13 @@ namespace BookWorm.Models
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
+
+        public string Description { get; set; }
+
+        public ulong Likes { get; set; }
+
+        public ulong Views { get; set; }
+
+        public virtual ICollection<string> Chapters { get; set; }
     }
 }
