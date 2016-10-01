@@ -10,6 +10,7 @@ namespace BookWorm.Models
         public WorkCreateViewModel()
         {
             this.Tags = new List<string>();
+            this.Chapters = new List<string>();
         }
 
         public int UserId { get; set; }
@@ -23,5 +24,13 @@ namespace BookWorm.Models
         public string CoverPhoto { get; set; }
 
         public List<string> Tags { get; set; }
+
+        public List<string> Chapters { get; set; }
+
+        public string Description { get; set; }
+
+        public ulong Likes { get; set; }
+
+        public ulong Views { get; set; }
     }
 }

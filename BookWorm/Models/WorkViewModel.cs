@@ -14,6 +14,14 @@ namespace BookWorm.Models
         public string Body { get; set; }
 
         public string Genre { get; set; }
+
+        public string Description { get; set; }
+
+        public ulong Likes { get; set; }
+
+        public ulong Views { get; set; }
+
+        public List<string> Chapters { get; set; }
         
     }
 }
