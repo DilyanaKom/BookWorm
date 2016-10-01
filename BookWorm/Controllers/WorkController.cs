@@ -129,6 +129,7 @@ namespace BookWorm.Controllers
                 work.Body = workDb.Body;
                 work.Title = workDb.Title;
                 work.Genre = workDb.Genre.ToString();
+  
 
                 for (int i = 0; i < workDb.Tags.Count; i++)
                 {
@@ -163,6 +164,7 @@ namespace BookWorm.Controllers
                     work.Body = items[i].Body;
                     work.Title = items[i].Title;
                     work.Genre = items[i].Genre.ToString();
+
 
                     for (int j = 0; j < items[i].Tags.Count; j++)
                     {
@@ -202,6 +204,7 @@ namespace BookWorm.Controllers
                         work.Body = items[i].Body;
                         work.Title = items[i].Title;
                         work.Genre = items[i].Genre.ToString();
+ 
 
                         for (int j = 0; j < items[i].Tags.Count; j++)
                         {

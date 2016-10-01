@@ -32,20 +32,52 @@ const sammyApp = Sammy('#main-content', function () {
 
     this.get("#/library", function () {
         if (data.users.current()) {
-            var works = data.library.get().data;
-            console.log(works);
-            this.redirect("#/library");
+            var books;
+        data.library.get()
+        .then(function(res){
+          books = res.Data;
+          return templates.get('library')
+          })
+          .then(function(template){
+            $content.html(template(books));
+          })
 
-            templates.get('library')
-            .then(function (template) {
-                $content.html(template());
-            });
-
-            return;
         } else {
             this.redirect("#/home");
         }
     });
+
+    this.get("#/user", function () {
+        if (data.users.current()) {
+            var books;
+        data.library.my()
+        .then(function(res){
+          console.log(res);
+          books = res.Data;
+          return templates.get('myLibrary')
+          })
+          .then(function(template){
+            $content.html(template(books));
+          })
+
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get('#/book/:id',function(){
+        var book;
+        
+        data.library.getById(this.params.id)
+        .then(function(res){
+          book = res.Data;
+
+          return templates.get('bookDetails')
+        })
+        .then(function(template){
+          $content.html(template(book));
+        })
+      })
 
     this.get('#/login', function (context) {
         if (data.users.current()) {
@@ -134,7 +166,7 @@ $(function () {
 
 //example of get request, no auth
 // httpRequester.getJSON("http://bookworm-1.apphb.com/api/Work/GetAllWorks")
-// .then(function (result) {
+// .then(function (Data) {
 //     console.log(result.data);
 // }, function (e) {
 //     console.log(e);

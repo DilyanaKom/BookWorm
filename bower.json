@@ -1,9 +1,6 @@
 {
-  "name": "research-simple-forum",
+  "name": "Bookworm",
   "version": "0.0.0",
-  "authors": [
-    "Doncho Minkov <DonchoMinkov@gmail.com>"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

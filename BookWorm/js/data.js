@@ -67,29 +67,67 @@ const data = (function () {
         };
     }
 
-    function getWorks(user) {
-        let promise = new Promise(function (resolve, reject) {
+    function getLibrary(){
+    var promise = new Promise(function(resolve, reject){
+      $.getJSON("api/work/WorkLibrary?offset=3&count=3", function(books){
+        resolve(books);
+      })
+    })
+    return promise;
+  }
 
+    function getMyLibrary(){
+        var promise = new Promise(function(resolve,reject){
             $.ajax({
-                url: "http://bookworm-1.apphb.com/api/Work/GetAllWorks",
-                method: "Get",
-                contentType: "application/json",
-                success: function (work) {
-                    if (work.Success) {
-
-                        localStorage.setItem(DATA_STORAGE_KEY, work.data);
-                        resolve(work);
-                    }
-                    else {
-                        alert(`${work.Message}`);
-                    }
-
-                    console.log(work);
+                url: '/api/work/myWorkLibrary?offset=3&count=3',
+                method: 'GET',
+                data: JSON.stringify(),
+                headers:{
+                'X-token' : localStorage.getItem(DATA_STORAGE_KEY)
+                },
+                contentType: 'application/json',
+                success: function(res){
+                resolve(res);
                 }
-            });
-        });
+            })
+        })
         return promise;
     }
+
+    function bookById(id){
+    var promise = new Promise(function(resolve, reject){
+      $.getJSON(`/api/work/WorkDetails?workId=${id}`, function(res){
+        resolve(res);
+      })
+    })
+    return promise;
+  }
+
+    // function getWorks(user) {
+    //     let promise = new Promise(function (resolve, reject) {
+
+    //         $.ajax({
+    //             url: "http://bookworm-1.apphb.com/api/Work/GetAllWorks",
+    //             method: "Get",
+    //             contentType: "application/json",
+    //             success: function (work) {
+    //                 if (work.Success) {
+
+    //                     localStorage.setItem(DATA_STORAGE_KEY, work.data);
+    //                     resolve(work);
+    //                 }
+    //                 else {
+    //                     alert(`${work.Message}`);
+    //                 }
+
+    //                 console.log(work);
+    //             }
+    //         });
+    //     });
+    //     return promise;
+    // }
+
+
 
     return {
         users: {
@@ -99,9 +137,11 @@ const data = (function () {
             current: getCurrentUser
         },
         library: {
-            get: getWorks,
+            get: getLibrary,
+            my: getMyLibrary,
+            getById: bookById,
             //add: booksAdd,
-            //addComment: booksAddComment
+            
         }
     };
 }());
