@@ -1,5 +1,13 @@
-const sammyApp = Sammy('#content', function () {
-    var $content = $('#content');
+const sammyApp = Sammy('#main-content', function () {
+    var $content = $('#main-content'),
+        $root = $('#root');
+
+    if (data.users.current()) {
+        templates.get('header')
+        .then(function (template) {
+            $root.prepend(template);
+        });
+    }
 
     this.get("#/", function () {
         if (data.users.current()) {

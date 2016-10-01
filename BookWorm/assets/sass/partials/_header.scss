@@ -1,0 +1,51 @@
+﻿header {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    background: url('../../../assets/images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: $margin-md + 10px 0;
+
+    nav {
+        height: $home-navbar-height;
+        background-color: transparent;
+        z-index: 1;
+        box-shadow: none;
+
+        ul {
+            display: inline-block;
+            margin: auto;
+            height: 100%;
+
+            li {
+                line-height: $home-navbar-height;
+
+                a {
+                    font-size: 1.6rem;
+                    opacity: .8;
+                    display: inline;
+                    padding: 0 $margin-sm + 5px;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        opacity: 1;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .brand-logo {
+            position: relative;
+            opacity: 1;
+            padding: 0 $margin-sm + 5px;
+
+            img {
+                display: block;
+                height: $home-navbar-height;
+            }
+        }
+    }
+}
