@@ -32,7 +32,10 @@ const sammyApp = Sammy('#main-content', function () {
 
     this.get("#/library", function () {
         if (data.users.current()) {
+            var works = data.library.get().data;
+            console.log(works);
             this.redirect("#/library");
+
             templates.get('library')
             .then(function (template) {
                 $content.html(template());
