@@ -1,26 +1,119 @@
 ﻿@font-face {
     font-family: 'Karla';
-    src: url('../../../assets/fonts/karla-regular-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/karla-regular-webfont.woff') format('woff');
+    src: url('../../../assets/fonts/karla-regular-webfont.woff2') format('woff2'), url('../../../assets/fonts/karla-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'Karla Italic';
-    src: url('../../../assets/fonts/karla-italic-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/karla-italic-webfont.woff') format('woff');
+    src: url('../../../assets/fonts/karla-italic-webfont.woff2') format('woff2'), url('../../../assets/fonts/karla-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'Karla Bold';
-    src: url('../../../assets/fonts/karla-bold-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/karla-bold-webfont.woff') format('woff');
+    src: url('../../../assets/fonts/karla-bold-webfont.woff2') format('woff2'), url('../../../assets/fonts/karla-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+// ICONS
+@font-face {
+    font-family: 'bookworm';
+    src: url('../../../assets/fonts/bookworm.eot?xvl8zh');
+    src: url('../../../assets/fonts/bookworm.eot?xvl8zh#iefix') format('embedded-opentype'), url('../../../assets/fonts/bookworm.ttf?xvl8zh') format('truetype'), url('../../../assets/fonts/bookworm.woff?xvl8zh') format('woff'), url('../../../assets/fonts/bookworm.svg?xvl8zh#bookworm') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'bookworm' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+    content: "\e900";
+}
+
+.icon-arrow-left:before {
+    content: "\e901";
+}
+
+.icon-arrow-right:before {
+    content: "\e902";
+}
+
+.icon-browse:before {
+    content: "\e903";
+}
+
+.icon-create:before {
+    content: "\e904";
+}
+
+.icon-facebook:before {
+    content: "\e905";
+}
+
+.icon-filter:before {
+    content: "\e906";
+}
+
+.icon-like-full:before {
+    content: "\e907";
+}
+
+.icon-like-o:before {
+    content: "\e908";
+}
+
+.icon-locked:before {
+    content: "\e909";
+}
+
+.icon-logout:before {
+    content: "\e90a";
+}
+
+.icon-news:before {
+    content: "\e90b";
+}
+
+.icon-notifications:before {
+    content: "\e90c";
+}
+
+.icon-search:before {
+    content: "\e90d";
+}
+
+.icon-settings:before {
+    content: "\e90e";
+}
+
+.icon-twitter:before {
+    content: "\e90f";
+}
+
+.icon-unlocked:before {
+    content: "\e910";
+}
+
+.icon-user:before {
+    content: "\e911";
+}
+
+.icon-views:before {
+    content: "\e912";
 }
