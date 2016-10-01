@@ -1,19 +1,19 @@
 ﻿header {
-    height: 100vh;
     text-align: center;
-    display: flex;
     background: url('../../../assets/images/header-bg.jpg');
     background-size: cover;
     background-position: center;
     padding: $margin-md + 10px 0;
-    flex-direction: column;
-    align-content: stretch;
 
     nav {
         height: $home-navbar-height;
         background-color: transparent;
-        z-index: 1;
         box-shadow: none;
+
+        .nav-wrapper {
+            z-index: 1;
+            position: relative;
+        }
 
         ul {
             display: inline-block;
@@ -28,6 +28,7 @@
                     opacity: .8;
                     display: inline;
                     padding: 0 $margin-sm + 5px;
+                    transition: opacity .2s ease-in-out;
 
                     &:hover,
                     &:active,
@@ -37,6 +38,10 @@
                     }
                 }
             }
+        }
+
+        .logo {
+            line-height: 1;
         }
 
         .brand-logo {
@@ -53,7 +58,8 @@
 
     .v-middle {
         z-index: 1;
-        flex: auto;
+        position: relative;
+        padding-bottom: $home-navbar-height;
     }
 
     .heading {
@@ -68,7 +74,14 @@
             opacity: .4;
             background-color: $white;
             vertical-align: middle;
-            margin-bottom: 2px;
+            margin: 0 $margin-xs 2px $margin-xs;
+        }
+    }
+
+    .go-to {
+        i {
+            z-index: 1;
+            position: relative;
         }
     }
 }

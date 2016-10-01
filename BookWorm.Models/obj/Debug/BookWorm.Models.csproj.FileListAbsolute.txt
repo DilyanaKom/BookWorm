@@ -17,3 +17,8 @@ C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWo
 C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
 C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.dll
 C:\Users\Viki\pStuff\Telerik Academy\JavaScript\Applications\11. Teamwork\BookWorm.Models\obj\Debug\BookWorm.Models.pdb
+W:\TelerikAcademy\Single-Page-Applications\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.dll
+W:\TelerikAcademy\Single-Page-Applications\BookWorm\BookWorm.Models\bin\Debug\BookWorm.Models.pdb
+W:\TelerikAcademy\Single-Page-Applications\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.csprojResolveAssemblyReference.cache
+W:\TelerikAcademy\Single-Page-Applications\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.dll
+W:\TelerikAcademy\Single-Page-Applications\BookWorm\BookWorm.Models\obj\Debug\BookWorm.Models.pdb

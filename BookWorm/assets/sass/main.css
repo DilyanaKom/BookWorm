@@ -115,21 +115,36 @@ body {
     width: 10px;
     height: 1px; }
 
+.table {
+  width: 100%;
+  display: table; }
+  .table.full {
+    height: 100vh; }
+
+.table-row {
+  display: table-row; }
+
+.table-cell {
+  display: table-cell; }
+
+.v-middle {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle; }
+
 header {
-  height: 100vh;
   text-align: center;
-  display: flex;
   background: url("../../../assets/images/header-bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
-  flex-direction: column;
-  align-content: stretch; }
+  padding: 50px 0; }
   header nav {
     height: 125px;
     background-color: transparent;
-    z-index: 1;
     box-shadow: none; }
+    header nav .nav-wrapper {
+      z-index: 1;
+      position: relative; }
     header nav ul {
       display: inline-block;
       margin: auto;
@@ -140,10 +155,13 @@ header {
           font-size: 1.6rem;
           opacity: .8;
           display: inline;
-          padding: 0 25px; }
+          padding: 0 25px;
+          transition: opacity .2s ease-in-out; }
           header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
             opacity: 1;
             background-color: transparent; }
+    header nav .logo {
+      line-height: 1; }
     header nav .brand-logo {
       position: relative;
       opacity: 1;
@@ -153,7 +171,8 @@ header {
         height: 125px; }
   header .v-middle {
     z-index: 1;
-    flex: auto; }
+    position: relative;
+    padding-bottom: 125px; }
   header .heading {
     margin: 0 0 20px 0; }
   header .sub-heading {
@@ -163,7 +182,10 @@ header {
       opacity: .4;
       background-color: #ffffff;
       vertical-align: middle;
-      margin-bottom: 2px; }
+      margin: 0 10px 2px 10px; }
+  header .go-to i {
+    z-index: 1;
+    position: relative; }
 
 .heading {
   margin: 0;

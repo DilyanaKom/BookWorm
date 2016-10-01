@@ -18,3 +18,26 @@
         height: 1px;
     }
 }
+
+.table {
+    width: 100%;
+    display: table;
+
+    &.full {
+        height: 100vh;
+    }
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.v-middle {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
