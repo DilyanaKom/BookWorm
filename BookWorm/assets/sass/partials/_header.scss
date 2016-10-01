@@ -1,57 +1,58 @@
 ﻿header {
-    text-align: center;
-    background: url('../../../assets/images/header-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: $margin-md + 10px 0;
+    overflow: hidden;
 
-    nav {
-        height: $home-navbar-height;
-        background-color: transparent;
-        box-shadow: none;
+    &#main {
+        text-align: center;
+        background: url('../../../assets/images/header-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: $margin-md + 10px 0;
 
-        .nav-wrapper {
-            z-index: 1;
-            position: relative;
+        nav {
+            @include navbar($home-navbar-height, $margin-sm + 5px, $margin-sm + 5px, transparent, .8);
         }
+    }
 
-        ul {
-            display: inline-block;
-            margin: auto;
-            height: 100%;
+    &#app {
+        nav {
+            @include navbar($app-navbar-height, 0, 0, $white, 1);
+            border-bottom: 1px solid $semi-grey;
 
-            li {
-                line-height: $home-navbar-height;
+            ul {
+                margin-right: -$margin-xs;
 
-                a {
-                    font-size: 1.6rem;
-                    opacity: .8;
-                    display: inline;
-                    padding: 0 $margin-sm + 5px;
-                    transition: opacity .2s ease-in-out;
+                li {
+                    height: 100%;
 
-                    &:hover,
-                    &:active,
-                    &:focus {
-                        opacity: 1;
-                        background-color: transparent;
+                    a {
+                        display: inline-block;
+                        margin: $margin-sm + 10px $margin-xs;
+                        font-size: 1.6rem;
+                        color: $dark-blue;
+
+                        .circle {
+                            background-color: transparent;
+                            @include transition(background-color, .2s, ease-in-out);
+
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                background-color: $super-light-grey;
+                            }
+                        }
                     }
                 }
             }
-        }
 
-        .logo {
-            line-height: 1;
-        }
+            .brand-logo {
+                height: 100%;
+                line-height: $app-navbar-height;
 
-        .brand-logo {
-            position: relative;
-            opacity: 1;
-            padding: 0 $margin-sm + 5px;
-
-            img {
-                display: block;
-                height: $home-navbar-height;
+                img {
+                    margin: $margin-sm + 10px 0;
+                    height: 40px;
+                    display: inline-block;
+                }
             }
         }
     }

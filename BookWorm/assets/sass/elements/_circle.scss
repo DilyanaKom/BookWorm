@@ -1,0 +1,19 @@
+﻿.circle {
+    display: block;
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $super-light-grey;
+    position: relative;
+
+    &.icon {
+        font-family: 'bookworm';
+
+        &::before {
+            position: absolute;
+            line-height: $circle-size;
+            text-align: center;
+            left: 0;
+            right: 0;
+        }
+    }
+}

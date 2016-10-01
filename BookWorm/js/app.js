@@ -11,7 +11,7 @@ const sammyApp = Sammy('#main-content', function () {
 
     this.get("#/", function () {
         if (data.users.current()) {
-            this.redirect("#/books");
+            this.redirect("#/library");
             return;
         } else {
             this.redirect("#/home");
@@ -20,7 +20,7 @@ const sammyApp = Sammy('#main-content', function () {
 
     this.get("#/home", function () {
         if (data.users.current()) {
-            this.redirect("#/books");
+            this.redirect("#/library");
             return;
         }
 
@@ -28,6 +28,20 @@ const sammyApp = Sammy('#main-content', function () {
         .then(function (template) {
             $content.html(template());
         });
+    });
+
+    this.get("#/library", function () {
+        if (data.users.current()) {
+            this.redirect("#/library");
+            templates.get('library')
+            .then(function (template) {
+                $content.html(template());
+            });
+
+            return;
+        } else {
+            this.redirect("#/home");
+        }
     });
 
     this.get('#/login', function (context) {
