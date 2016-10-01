@@ -1,0 +1,23 @@
+﻿.btn {
+    border-radius: 50px;
+    display: inline-block;
+    height: $button-height;
+    font-size: 1.2rem;
+    padding: 0 $margin-sm;
+
+    &.line {
+        &.black-and-white {
+            border: 1px solid $white;
+            line-height: $button-height;
+            background-color: transparent;
+            box-shadow: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $dark-grey;
+                border-color: $dark-grey;
+            }
+        }
+    }
+}

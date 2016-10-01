@@ -1,0 +1,15 @@
+﻿section {
+    width: 100%;
+    padding: $margin-xl 0;
+    text-align: center;
+    background-color: $white;
+
+    h1.heading {
+        margin-bottom: $margin-xl;
+    }
+
+    .desc {
+        font-size: 1.6rem;
+        color: $light-grey;
+    }
+}

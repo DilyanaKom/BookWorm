@@ -4,9 +4,13 @@
 @import './settings/variables';
 @import './settings/globals';
 @import './settings/helpers';
+@import './settings/mixins';
 
 // PARTIALS
 @import './partials/header';
 
 // ELEMENTS
 @import './elements/text';
+@import './elements/section';
+@import './elements/container';
+@import './elements/button';

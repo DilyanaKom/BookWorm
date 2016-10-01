@@ -177,7 +177,8 @@ header {
     margin: 0 0 20px 0; }
   header .sub-heading {
     color: #ffffff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 20px; }
     header .sub-heading .dash {
       opacity: .4;
       background-color: #ffffff;
@@ -194,9 +195,70 @@ header {
   color: #40444f; }
   .heading.big {
     font-size: 3.5rem; }
+  .heading.small {
+    font-size: 2.1rem; }
+  .heading.serif {
+    font-family: 'Karla'; }
 
 .sub-heading {
   margin: 0;
   font-size: 1.2rem;
   font-family: 'Karla'; }
+
+section {
+  width: 100%;
+  padding: 120px 0;
+  text-align: center;
+  background-color: #ffffff; }
+  section h1.heading {
+    margin-bottom: 120px; }
+  section .desc {
+    font-size: 1.6rem;
+    color: #9a9ea8; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container-fluid:before, .container-fluid:after {
+    content: " ";
+    display: table; }
+  .container-fluid:after {
+    clear: both; }
+
+.btn {
+  border-radius: 50px;
+  display: inline-block;
+  height: 30px;
+  font-size: 1.2rem;
+  padding: 0 20px; }
+  .btn.line.black-and-white {
+    border: 1px solid #ffffff;
+    line-height: 30px;
+    background-color: transparent;
+    box-shadow: none; }
+    .btn.line.black-and-white:hover, .btn.line.black-and-white:active, .btn.line.black-and-white:focus {
+      background-color: #333333;
+      border-color: #333333; }
 

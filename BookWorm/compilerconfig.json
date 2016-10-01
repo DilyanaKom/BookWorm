@@ -2,5 +2,9 @@
   {
     "outputFile": "assets/sass/main.css",
     "inputFile": "assets/sass/main.scss"
+  },
+  {
+    "outputFile": "public/bower_components/materialize/sass/components/_buttons.css",
+    "inputFile": "public/bower_components/materialize/sass/components/_buttons.scss"
   }
 ]
