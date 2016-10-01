@@ -109,6 +109,12 @@ body {
   .overlay.overlay-1 {
     background-color: rgba(0, 0, 0, 0.1); }
 
+.dash {
+  display: inline-block; }
+  .dash.long {
+    width: 10px;
+    height: 1px; }
+
 header {
   height: 100vh;
   text-align: center;
@@ -116,7 +122,9 @@ header {
   background: url("../../../assets/images/header-bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 50px 0; }
+  padding: 50px 0;
+  flex-direction: column;
+  align-content: stretch; }
   header nav {
     height: 125px;
     background-color: transparent;
@@ -143,4 +151,30 @@ header {
       header nav .brand-logo img {
         display: block;
         height: 125px; }
+  header .v-middle {
+    z-index: 1;
+    flex: auto; }
+  header .heading {
+    margin: 0 0 20px 0; }
+  header .sub-heading {
+    color: #ffffff;
+    text-transform: uppercase; }
+    header .sub-heading .dash {
+      opacity: .4;
+      background-color: #ffffff;
+      vertical-align: middle;
+      margin-bottom: 2px; }
+
+.heading {
+  margin: 0;
+  font-size: 2.8rem;
+  font-family: 'Times New Roman';
+  color: #40444f; }
+  .heading.big {
+    font-size: 3.5rem; }
+
+.sub-heading {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: 'Karla'; }
 

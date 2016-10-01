@@ -9,3 +9,12 @@
         background-color: transparentize(#000, .9);
     }
 }
+
+.dash {
+    display: inline-block;
+
+    &.long {
+        width: 10px;
+        height: 1px;
+    }
+}

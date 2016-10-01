@@ -6,6 +6,8 @@
     background-size: cover;
     background-position: center;
     padding: $margin-md + 10px 0;
+    flex-direction: column;
+    align-content: stretch;
 
     nav {
         height: $home-navbar-height;
@@ -46,6 +48,27 @@
                 display: block;
                 height: $home-navbar-height;
             }
+        }
+    }
+
+    .v-middle {
+        z-index: 1;
+        flex: auto;
+    }
+
+    .heading {
+        margin: 0 0 $margin-sm 0;
+    }
+
+    .sub-heading {
+        color: $white;
+        text-transform: uppercase;
+
+        .dash {
+            opacity: .4;
+            background-color: $white;
+            vertical-align: middle;
+            margin-bottom: 2px;
         }
     }
 }
