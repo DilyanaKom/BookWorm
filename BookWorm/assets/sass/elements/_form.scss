@@ -1,2 +1,56 @@
-﻿body {
+﻿input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border: 0;
+    @include box-shadow(0, 5px, 10px, 0, transparentize($black, .84));
+}
+
+input {
+    &.grey {
+        margin-bottom: 0;
+        background-color: transparentize($black, .97) !important;
+        font-size: 1.2rem;
+        padding: 0 $margin-xs;
+        box-shadow: none;
+        color: transparentize($light-grey, .5);
+        text-transform: none;
+        border: 0;
+        @include transition(box-shadow, .2s, ease-in-out);
+
+        i {
+            color: $light-grey;
+            vertical-align: middle;
+            margin-right: $margin-xs;
+        }
+    }
+}
+
+.search-form {
+    display: inline-block;
+    width: 230px;
+    position: relative;
+
+   .submit {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        line-height: 3rem;
+        font-size: 1.2rem;
+        font-family: 'bookworm';
+        cursor: pointer;
+        padding: 0 $margin-xs;
+        color: $light-grey;
+    }
 }

@@ -297,6 +297,10 @@ section {
         flex: 1; }
       section#app-section .header .right {
         align-self: center; }
+        section#app-section .header .right .dropdown-button {
+          margin-right: 10px; }
+        section#app-section .header .right input {
+          width: 210px; }
   section.sm {
     padding: 50px 0; }
   section h1.heading {
@@ -477,4 +481,57 @@ section {
           transition: margin 0.2s ease-in-out; }
         .card.horizontal .card-action .read-more span {
           margin-right: 10px; }
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border: 0;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16); }
+
+input.grey {
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  box-shadow: none;
+  color: rgba(154, 158, 168, 0.5);
+  text-transform: none;
+  border: 0;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out; }
+  input.grey i {
+    color: #9a9ea8;
+    vertical-align: middle;
+    margin-right: 10px; }
+
+.search-form {
+  display: inline-block;
+  width: 230px;
+  position: relative; }
+  .search-form .submit {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    font-family: 'bookworm';
+    cursor: pointer;
+    padding: 0 10px;
+    color: #9a9ea8; }
 

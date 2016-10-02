@@ -25,6 +25,14 @@
 
             .right {
                 align-self: center;
+
+                .dropdown-button {
+                    margin-right: $margin-xs;
+                }
+                
+                input {
+                    width: 210px;
+                }
             }
         }
     }

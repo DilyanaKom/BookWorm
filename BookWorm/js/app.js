@@ -33,15 +33,19 @@ const sammyApp = Sammy('#main-content', function () {
     this.get("#/library", function () {
         if (data.users.current()) {
             var books;
-        data.library.get()
-        .then(function(res){
-          books = res.Data;
-          return templates.get('library')
-          })
-          .then(function(template){
-            $content.html(template(books));
-          })
+            data.library.get()
+            .then(function (res) {
+                books = res.Data;
+                return templates.get('library')
+            })
+            .then(function (template) {
+                $content.html(template(books));
+            });
 
+            // NEEDED SO THAT THE FILTER DROPDOWN WORKS
+            setTimeout(function () {
+                $('a[data-activates="filter-dropdown"]').dropdown();
+            }, 600);
         } else {
             this.redirect("#/home");
         }
@@ -50,34 +54,34 @@ const sammyApp = Sammy('#main-content', function () {
     this.get("#/user", function () {
         if (data.users.current()) {
             var books;
-        data.library.my()
-        .then(function(res){
-          console.log(res);
-          books = res.Data;
-          return templates.get('myLibrary')
-          })
-          .then(function(template){
-            $content.html(template(books));
-          })
+            data.library.my()
+            .then(function (res) {
+                console.log(res);
+                books = res.Data;
+                return templates.get('myLibrary')
+            })
+            .then(function (template) {
+                $content.html(template(books));
+            });
 
         } else {
             this.redirect("#/home");
         }
     });
 
-    this.get('#/book/:id',function(){
+    this.get('#/book/:id', function () {
         var book;
-        
-        data.library.getById(this.params.id)
-        .then(function(res){
-          book = res.Data;
 
-          return templates.get('bookDetails')
+        data.library.getById(this.params.id)
+        .then(function (res) {
+            book = res.Data;
+
+            return templates.get('bookDetails')
         })
-        .then(function(template){
-          $content.html(template(book));
+        .then(function (template) {
+            $content.html(template(book));
         })
-      })
+    })
 
     this.get('#/login', function (context) {
         if (data.users.current()) {
