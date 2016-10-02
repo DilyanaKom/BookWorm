@@ -2,7 +2,7 @@
 
 <section id="app-section" class="work">
     <div id="work-details">
-        <div class="header" style="background: url('http://i.imgur.com/U1Er56V.jpg'); background-size: cover; background-position: center;">
+        <div class="header" style="background: url('{{CoverPhoto}}'); background-size: cover; background-position: center; background-color: rgba(64, 68, 79, .4);">
             <div class="container">
                 <div class="top">
                     <div class="badge left">
@@ -10,18 +10,30 @@
                         <span class="number-views">666</span>
                     </div>
                     <div class="social right">
-                        <a href="#/" class="circle social icon-facebook"></a>
-                        <a href="#/" class="circle social icon-twitter"></a>
+                        <a href="#/" class="circle icon social-button icon-facebook"></a>
+                        <a href="#/" class="circle icon social-button icon-twitter"></a>
                     </div>
                 </div>
-                <div class="middle">
-                    <h1 class="heading big">{{Title}}</h1>
-                    <p class="sub-heading">
-                        <span>by </span>
-                        <a href="#/" class="author">{{User}}</a>
-                    </p>
+                <div class="middle center-align">
+                    <a class="chapter-action previous hidden">
+                        <i class="icon-arrow-left"></i>
+                        <span>Previous Chapter</span>
+                    </a>
+                    <div class="headings">
+                        <h1 class="heading big">{{Title}}</h1>
+                        <p class="sub-heading">
+                            <span>by </span>
+                            <a href="#/users/{{User}}" class="author">{{User}}</a>
+                        </p>
+                    </div>
+                    <a class="chapter-action next">
+                        <i class="icon-arrow-right"></i>
+                        <span>Next Chapter</span>
+                    </a>
                 </div>
             </div>
+            <div class="bottom-shadow"></div>
+            <div class="overlay overlay-3"></div>
         </div>
         <div class="like-container">
             <button class="btn white wide like in-work round">
@@ -32,7 +44,7 @@
                 <span class="number-likes">{{Likes}}</span>
             </button>
         </div>
-        <div class="container">
+        <div class="container content-wrapper center-align">
             <h3 class="heading medium">{{Title}}</h3>
             <p class="text">
                 MAMZELLE AURLIE possessed a good strong figure, ruddy cheeks, hair that was changing from brown to gray, and a determined eye. She wore a man's hat about the farm, and an old blue army overcoat when it was cold, and sometimes top-boots.
@@ -41,6 +53,14 @@
                 <br /><br />
                 So she was quite alone in the world, except for her dog Ponto, and the negroes who lived in her cabins and worked her crops, and the fowls, a few cows, a couple of mules, her gun (with which she shot chicken-hawks), and her religion.
             </p>
+            <div class="chapter-controls">
+                <a href="#/" class="btn square grey hidden">
+                    <i class="icon-arrow-left"></i>
+                </a>
+                <a href="#/" class="btn square grey">
+                    <i class="icon-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

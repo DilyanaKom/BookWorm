@@ -6,7 +6,11 @@
     left: 0;
 
     &.overlay-1 {
-        background-color: transparentize(#000, .9);
+        background-color: transparentize($black, .9);
+    }
+
+    &.overlay-3 {
+        background-color: transparentize($black, .7);
     }
 }
 
@@ -44,4 +48,11 @@
 
 .upcase {
     text-transform: uppercase;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity, .2s, ease-in-out);
+    @include transition(visibility, .2s, ease-in-out);
 }

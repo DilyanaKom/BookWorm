@@ -121,6 +121,8 @@ body {
   left: 0; }
   .overlay.overlay-1 {
     background-color: rgba(0, 0, 0, 0.1); }
+  .overlay.overlay-3 {
+    background-color: rgba(0, 0, 0, 0.3); }
 
 .dash {
   display: inline-block; }
@@ -147,6 +149,18 @@ body {
 
 .upcase {
   text-transform: uppercase; }
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: visibility 0.2s ease-in-out;
+  -o-transition: visibility 0.2s ease-in-out;
+  -webkit-transition: visibility 0.2s ease-in-out;
+  transition: visibility 0.2s ease-in-out; }
 
 header {
   overflow: hidden; }
@@ -332,20 +346,87 @@ section {
   section #work-details .header {
     display: block;
     padding: 50px 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    position: relative; }
+    section #work-details .header .container {
+      position: relative;
+      z-index: 1;
+      height: 100%; }
+      section #work-details .header .container .top {
+        display: inline-block;
+        width: 100%;
+        max-height: 30px; }
+        section #work-details .header .container .top .social {
+          max-height: 25px;
+          margin-top: 2.5px; }
+          section #work-details .header .container .top .social a {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            font-size: .8rem;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-left: 10px;
+            -moz-transition: background-color 0.2s ease-in-out;
+            -o-transition: background-color 0.2s ease-in-out;
+            -webkit-transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out; }
+            section #work-details .header .container .top .social a::before {
+              line-height: 25px; }
+            section #work-details .header .container .top .social a:hover, section #work-details .header .container .top .social a:active, section #work-details .header .container .top .social a:focus {
+              background-color: rgba(0, 0, 0, 0.3); }
+      section #work-details .header .container .heading {
+        margin: 0;
+        color: #ffffff; }
+      section #work-details .header .container .sub-heading {
+        display: inline-block;
+        text-transform: none;
+        margin-top: 10px; }
+        section #work-details .header .container .sub-heading span {
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.7); }
+        section #work-details .header .container .sub-heading .author {
+          color: #ffffff;
+          font-family: 'Karla Bold';
+          padding-bottom: 2px;
+          border-bottom: 1px solid transparent;
+          -moz-transition: border-bottom 0.2s ease-in-out;
+          -o-transition: border-bottom 0.2s ease-in-out;
+          -webkit-transition: border-bottom 0.2s ease-in-out;
+          transition: border-bottom 0.2s ease-in-out; }
+          section #work-details .header .container .sub-heading .author:hover, section #work-details .header .container .sub-heading .author:active, section #work-details .header .container .sub-heading .author:focus {
+            border-bottom: 1px solid #ffffff; }
+      section #work-details .header .container .middle {
+        display: flex;
+        height: calc(100% - 50px);
+        align-items: center; }
+        section #work-details .header .container .middle .headings {
+          flex: 1; }
+        section #work-details .header .container .middle .chapter-action {
+          color: #ffffff;
+          cursor: pointer;
+          -moz-transition: opacity 0.2s ease-in-out;
+          -o-transition: opacity 0.2s ease-in-out;
+          -webkit-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out; }
+          section #work-details .header .container .middle .chapter-action:hover, section #work-details .header .container .middle .chapter-action:active, section #work-details .header .container .middle .chapter-action:focus {
+            opacity: .7; }
+          section #work-details .header .container .middle .chapter-action span {
+            display: block; }
   section #work-details .like-container {
     top: -15px;
     position: relative;
     display: inline-block;
     width: 100%;
-    text-align: center; }
-  section #work-details .container {
+    text-align: center;
+    z-index: 1; }
+  section #work-details .content-wrapper {
     margin-top: -30px; }
-    section #work-details .container .heading {
+    section #work-details .content-wrapper .heading {
       margin-top: 65px;
       margin-bottom: 50px;
       text-align: center; }
-    section #work-details .container .text {
+    section #work-details .content-wrapper .text {
       display: block;
       max-width: 500px;
       margin: auto;
@@ -353,7 +434,30 @@ section {
       line-height: 2.8rem;
       font-size: 1.8rem;
       color: #9a9ea8;
+      margin-bottom: 50px; }
+    section #work-details .content-wrapper .chapter-controls {
       margin-bottom: 65px; }
+      section #work-details .content-wrapper .chapter-controls a {
+        width: 30px;
+        padding: 0;
+        margin: 0 5px; }
+      section #work-details .content-wrapper .chapter-controls i {
+        margin: 0; }
+  section #work-details .bottom-shadow {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    opacity: .15;
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    background: -moz-linear-gradient(top, transparent 0%, black 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(100%, black));
+    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
+    background: -o-linear-gradient(top, transparent 0%, black 100%);
+    background: -ms-linear-gradient(top, transparent 0%, black 100%);
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 ); }
 
 .container {
   margin-right: auto;
