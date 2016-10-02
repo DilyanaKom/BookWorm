@@ -1,54 +1,42 @@
-<section id="app-section" class="sm">
-    <div class="container">
-        <div class="header">
-            <div class="left">
-                <h1 class="heading big">My Library</h1>
-                <p class="sub-heading">All texts published by me</p>
-            </div>
-            <div class="right">
-                <a class="dropdown-button btn grey normal" data-activates="filter-dropdown">
-                    <i class="icon-filter"></i>
-                    <span>Filter by</span>
-                </a>
-                <ul id="filter-dropdown" class="dropdown-content">
-                    <li><a>Poems</a></li>
-                    <li><a>Stories</a></li>
-                    <li><a>Books</a></li>
-                </ul>
-                <input type="text" placeholder="Search" value="" />
-            </div>
+<section id="app-section" class="sm full">
+    <div id="profile" class="container">
+        <div class="header center-align">
+            <h1 class="heading big">Profile</h1>
+            <p class="sub-heading">Current Username HERE!</p>
         </div>
+        {{#if this}}
         <div class="row">
-            {{#if this}}
-                {{#each this}}
-                <div class="col s12 m4">
-                    <div class="card horizontal">
-                        <div class="card-image" style="background: url('http://wallpoper.com/images/00/42/51/55/nature-trees_00425155.jpg'); background-size: cover; background-position: center;"></div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <h4 class="card-title heading mini">{{Title}}</h4>
-                                <p class="desc">{{Description}}</p>
-                            </div>
-                            <div class="card-action">
-                                <button class="btn like">
-                                    <span class="icons">
-                                        <i class="icon-like-o"></i>
-                                        <i class="icon-like-full"></i>
-                                    </span>
-                                    <span class="number-likes">{{Likes}}</span>
-                                </button>
-                                <a href="#/library" class="right read-more">
-                                    <span class="label">Read More</span>
-                                    <i class="icon-arrow-right"></i>
-                                </a>
-                            </div>
+            {{#each this}}
+            <div class="col s12 m4">
+                <div class="card horizontal">
+                    <div class="card-image" style="background: url('{{CoverPhoto}}'); background-size: cover; background-position: center;"></div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <h4 class="card-title heading mini">{{Title}}</h4>
+                            <p class="desc">{{Description}}</p>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn like">
+                                <span class="icons">
+                                    <i class="icon-like-o"></i>
+                                    <i class="icon-like-full"></i>
+                                </span>
+                                <span class="number-likes">{{Likes}}</span>
+                            </button>
+                            <a href="#/book/{{Id}}" class="right read-more">
+                                <span class="label">Read More</span>
+                                <i class="icon-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                {{/each}}
-            {{else}}
-                <h2>No Books</h2>
-            {{/if}}
+            </div>
+            {{/each}}
         </div>
+        {{else}}
+        <div class="no-wrapper">
+            <h2 class="heading medium no-books">No Books</h2>
+        </div>
+        {{/if}}
     </div>
 </section>

@@ -314,19 +314,20 @@ section {
     section#app-section .heading {
       margin-bottom: 20px; }
     section#app-section .header {
-      display: inline-block;
       width: 100%;
       margin-bottom: 50px;
-      display: flex;
-      flex-direction: row; }
-      section#app-section .header .left {
-        flex: 1; }
-      section#app-section .header .right {
-        align-self: center; }
-        section#app-section .header .right .dropdown-button {
-          margin-right: 10px; }
-        section#app-section .header .right input {
-          width: 210px; }
+      display: inline-block; }
+      section#app-section .header.flex {
+        display: flex;
+        flex-direction: row; }
+        section#app-section .header.flex .left {
+          flex: 1; }
+        section#app-section .header.flex .right {
+          align-self: center; }
+          section#app-section .header.flex .right .dropdown-button {
+            margin-right: 10px; }
+          section#app-section .header.flex .right input {
+            width: 210px; }
   section.sm {
     padding: 50px 0; }
   section.work {
@@ -458,6 +459,18 @@ section {
     background: -ms-linear-gradient(top, transparent 0%, black 100%);
     background: linear-gradient(to bottom, transparent 0%, black 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 ); }
+  section #profile {
+    height: 100%; }
+    section #profile .no-wrapper {
+      width: 100%;
+      min-height: 400px;
+      max-height: 500px;
+      display: table; }
+      section #profile .no-wrapper .heading {
+        display: table-cell;
+        vertical-align: middle;
+        color: #9a9ea8;
+        text-align: center; }
 
 .container {
   margin-right: auto;

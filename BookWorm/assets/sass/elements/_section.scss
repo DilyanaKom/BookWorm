@@ -17,25 +17,28 @@
         }
 
         .header {
-            display: inline-block;
             width: 100%;
             margin-bottom: $margin-md + 10px;
-            display: flex;
-            flex-direction: row;
+            display: inline-block;
 
-            .left {
-                flex: 1;
-            }
+            &.flex {
+                display: flex;
+                flex-direction: row;
 
-            .right {
-                align-self: center;
-
-                .dropdown-button {
-                    margin-right: $margin-xs;
+                .left {
+                    flex: 1;
                 }
 
-                input {
-                    width: 210px;
+                .right {
+                    align-self: center;
+
+                    .dropdown-button {
+                        margin-right: $margin-xs;
+                    }
+
+                    input {
+                        width: 210px;
+                    }
                 }
             }
         }
@@ -223,6 +226,24 @@
             position: absolute;
             bottom: 0;
             @include vertical-black-and-white-gradient();
+        }
+    }
+
+    #profile {
+        height: 100%;
+
+        .no-wrapper {
+            width: 100%;
+            min-height: 400px;
+            max-height: 500px;
+            display: table;
+
+            .heading {
+                display: table-cell;
+                vertical-align: middle;
+                color: $light-grey;
+                text-align: center;
+            }
         }
     }
 }
