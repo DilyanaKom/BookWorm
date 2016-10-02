@@ -5,6 +5,12 @@
         margin: 0 0 $margin-sm + 10px 0;
         height: 190px;
         text-align: left;
+        @include box-shadow(0, 2px, 5px,  0, transparentize($black, .88));
+        @include transition(box-shadow, .1s, ease-in-out);
+
+        &:hover {
+        @include box-shadow(0, 5px, 15px,  0, transparentize($black, .84));
+        }
 
         .card-image {
             width: 125px;
@@ -28,6 +34,7 @@
         }
 
         .card-action {
+            border-color: $border-color;
             padding: 15px 10px 15px 20px;
 
             a:not(.btn):not(.btn-large):not(.btn-floating) {

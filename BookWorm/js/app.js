@@ -7,6 +7,10 @@ const sammyApp = Sammy('#main-content', function () {
         .then(function (template) {
             $root.prepend(template);
         });
+        templates.get('composeButton')
+        .then(function (template) {
+            $root.append(template);
+        });
     }
 
     this.get("#/", function () {

@@ -51,4 +51,25 @@
     &.round {
         border-radius: 50px;
     }
+
+    &#compose-button {
+        position: fixed;
+        right: $margin-md + 10px;
+        bottom: $margin-md + 10px;
+    }
+
+    &.red {
+        background-color: $red !important;
+    }
+
+    &.btn-floating {
+        @include box-shadow(0, 2px, 5px, 0, transparentize($black, .88));
+        @include transition(box-shadow, .1s, ease-in-out);
+
+        &:hover,
+        &:active,
+        &:focus {
+            @include box-shadow(0, 5px, 10px, 0, transparentize($black, .84));
+        }
+    }
 }
