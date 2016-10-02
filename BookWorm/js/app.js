@@ -60,12 +60,59 @@ const sammyApp = Sammy('#main-content', function () {
             var books;
             data.library.my()
             .then(function (res) {
-                console.log(res);
                 books = res.Data;
                 return templates.get('myLibrary')
             })
             .then(function (template) {
                 $content.html(template(books));
+            });
+
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get("#/notifications", function () {
+        if (data.users.current()) {
+            var books;
+            data.library.my()
+            .then(function (res) {
+                return templates.get('notifications')
+            })
+            .then(function (template) {
+                $content.html(template());
+            });
+
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get("#/settings", function () {
+        if (data.users.current()) {
+            var books;
+            data.library.my()
+            .then(function (res) {
+                return templates.get('settings')
+            })
+            .then(function (template) {
+                $content.html(template());
+            });
+
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get("#/daily", function () {
+        if (data.users.current()) {
+            var books;
+            data.library.my()
+            .then(function (res) {
+                return templates.get('daily')
+            })
+            .then(function (template) {
+                $content.html(template());
             });
 
         } else {

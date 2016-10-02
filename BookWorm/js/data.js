@@ -69,41 +69,41 @@ const data = (function () {
         };
     }
 
-    function getLibrary(){
-    var promise = new Promise(function(resolve, reject){
-      $.getJSON("api/work/WorkLibrary?offset=3&count=3", function(books){
-        resolve(books);
-      })
-    })
-    return promise;
-  }
+    function getLibrary() {
+        var promise = new Promise(function (resolve, reject) {
+            $.getJSON("api/work/WorkLibrary?offset=3&count=3", function (books) {
+                resolve(books);
+            })
+        })
+        return promise;
+    }
 
-    function getMyLibrary(){
-        var promise = new Promise(function(resolve,reject){
+    function getMyLibrary() {
+        var promise = new Promise(function (resolve, reject) {
             $.ajax({
                 url: '/api/work/myWorkLibrary?offset=3&count=3',
                 method: 'GET',
                 data: JSON.stringify(),
-                headers:{
-                'X-token' : localStorage.getItem(DATA_STORAGE_KEY)
+                headers: {
+                    'X-token': localStorage.getItem(DATA_STORAGE_KEY)
                 },
                 contentType: 'application/json',
-                success: function(res){
-                resolve(res);
+                success: function (res) {
+                    resolve(res);
                 }
             })
         })
         return promise;
     }
 
-    function bookById(id){
-    var promise = new Promise(function(resolve, reject){
-      $.getJSON(`/api/work/WorkDetails?workId=${id}`, function(res){
-        resolve(res);
-      })
-    })
-    return promise;
-  }
+    function bookById(id) {
+        var promise = new Promise(function (resolve, reject) {
+            $.getJSON(`/api/work/WorkDetails?workId=${id}`, function (res) {
+                resolve(res);
+            })
+        })
+        return promise;
+    }
 
     // function getWorks(user) {
     //     let promise = new Promise(function (resolve, reject) {
@@ -143,7 +143,7 @@ const data = (function () {
             my: getMyLibrary,
             getById: bookById,
             //add: booksAdd,
-            
+
         }
     };
 }());
