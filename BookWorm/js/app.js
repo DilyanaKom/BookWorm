@@ -48,7 +48,7 @@ const sammyApp = Sammy('#main-content', function () {
 
             // NEEDED SO THAT THE FILTER DROPDOWN WORKS
             setTimeout(function () {
-                $('a[data-activates="filter-dropdown"]').dropdown();
+                $('.dropdown-button').dropdown();
             }, 600);
         } else {
             this.redirect("#/home");
@@ -115,6 +115,28 @@ const sammyApp = Sammy('#main-content', function () {
                 $content.html(template());
             });
 
+        } else {
+            this.redirect("#/home");
+        }
+    });
+
+    this.get("#/create", function () {
+        if (data.users.current()) {
+            var books;
+            data.library.my()
+            .then(function (res) {
+                return templates.get('create')
+            })
+            .then(function (template) {
+                $content.html(template());
+            });
+            
+            // NEEDED SO THAT THE SELECT GENRE WORKS
+            setTimeout(function () {
+                $('select').material_select();
+                $('.select-wrapper .caret').remove();
+                $('.modal-trigger').leanModal();
+            }, 600);
         } else {
             this.redirect("#/home");
         }

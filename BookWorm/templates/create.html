@@ -1,0 +1,50 @@
+﻿<section id="app-section" class="sm full">
+    <div id="create" class="container">
+        <div class="header flex">
+            <div class="left">
+                <input type="text" maxlength="50" placeholder="Type work title" class="transparent heading big">
+                <input type="text" maxlength="50" placeholder="Type chapter title" class="transparent sub-heading">
+            </div>
+            <div class="right">
+                <div class="input-field grey">
+                    <select>
+                        <option value="" disabled selected>Select Genre</option>
+                        <option value="poem">Poem</option>
+                        <option value="short story">Short Story</option>
+                        <option value="book">Book</option>
+                    </select>
+                </div>
+
+                <button class="btn grey icon modal-trigger normal" data-target="settings">
+                    <i class="icon-settings"></i>
+                    <span>Settings</span>
+                </button>
+
+                <!-- Modal Structure -->
+                <div id="settings" class="modal">
+                    <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <textarea id="textarea1" class="materialize-textarea transparent" placeholder="Start writing..."></textarea>
+        <button class="btn round waves-effect waves-light submit">Publish</button>
+    </div>
+</section>
+
+<script>
+    setTimeout(function () {
+        $('.dropdown-content li').click(function () {
+            if ($(this).find('span').html() === 'Book') {
+                $('.sub-heading').addClass('visible');
+            } else {
+                $('.sub-heading').removeClass('visible');
+            }
+        })
+    }, 500);
+</script>

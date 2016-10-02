@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\fonts\bookworm.svg" />
+    <Content Include="assets\images\background-image.png" />
     <Content Include="assets\images\header-bg.jpg" />
     <Content Include="assets\images\logo.svg" />
     <Content Include="assets\images\small-logo.svg" />
@@ -1503,7 +1504,6 @@
     <Content Include="public\bower_components\materialize\templates\parallax-template\LICENSE" />
     <Content Include="public\bower_components\materialize\templates\starter-template\LICENSE" />
     <Content Include="assets\sass\elements\_form.scss" />
-    <Content Include="assets\sass\partials\_library.scss" />
     <Content Include="public\bower_components\jquery-ui\.bower.json" />
     <Content Include="public\bower_components\jquery-ui\.gitignore" />
     <Content Include="public\bower_components\jquery-ui\bower.json" />
@@ -1512,6 +1512,8 @@
     <Content Include="public\bower_components\jquery-ui\package.json" />
     <Content Include="public\bower_components\jquery-ui\README.md" />
     <Content Include="public\bower_components\jquery-ui\ui\.jshintrc" />
+    <Content Include="assets\sass\elements\_badge.scss" />
+    <Content Include="assets\sass\partials\_loginRegister.scss" />
     <None Include="scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="scripts\hammer.min.js" />
     <Content Include="scripts\jquery-3.1.0.js" />
@@ -1521,12 +1523,16 @@
     <Content Include="scripts\libs\rspv.min.js" />
     <Content Include="templates\bookDetails.html" />
     <Content Include="templates\composeButton.html" />
+    <Content Include="templates\create.html" />
+    <Content Include="templates\daily.html" />
     <Content Include="templates\header.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\library.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\myLibrary.html" />
+    <Content Include="templates\notifications.html" />
     <Content Include="templates\register.html" />
+    <Content Include="templates\settings.html" />
     <Content Include="test\index.html" />
     <Content Include="Web.config" />
   </ItemGroup>

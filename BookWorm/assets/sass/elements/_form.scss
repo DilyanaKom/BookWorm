@@ -55,6 +55,38 @@ input {
             box-shadow: none;
         }
     }
+
+    &.transparent {
+        border: 0;
+
+        &:not([type]):focus:not([readonly]),
+        &[type=text]:focus:not([readonly]),
+        &[type=password]:focus:not([readonly]),
+        &[type=email]:focus:not([readonly]),
+        &[type=url]:focus:not([readonly]),
+        &[type=time]:focus:not([readonly]),
+        &[type=date]:focus:not([readonly]),
+        &[type=datetime]:focus:not([readonly]),
+        &[type=datetime-local]:focus:not([readonly]),
+        &[type=tel]:focus:not([readonly]),
+        &[type=number]:focus:not([readonly]),
+        &[type=search]:focus:not([readonly]),
+        &.materialize-textarea:focus:not([readonly]) {
+            box-shadow: none;
+        }
+    }
+}
+
+textarea {
+    font-size: 1.2rem;
+
+    &.transparent {
+        border: 0;
+
+        &:focus:not([readonly]) {
+            box-shadow: none;
+        }
+    }
 }
 
 .search-form {
@@ -74,5 +106,52 @@ input {
         cursor: pointer;
         padding: 0 $margin-xs;
         color: $light-grey;
+    }
+}
+
+.input-field {
+    margin: 0;
+    display: inline-block;
+
+    &.grey {
+        background-color: transparentize($black, .97) !important;
+
+        .select-wrapper {
+            margin-bottom: 0;
+            box-shadow: none;
+            text-transform: none;
+            border-bottom: 0;
+            @include transition(box-shadow, .2s, ease-in-out);
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: 0;
+                @include box-shadow(0, 5px, 10px, 0, transparentize($black, .84));
+            }
+
+            .select-dropdown {
+                border-bottom: 0;
+                padding: 0 $margin-xs;
+                font-size: 1.2rem;
+                color: transparentize($light-grey, .5);
+            }
+
+            .dropdown-content {
+                padding: 0;
+
+                li:not(.disabled) {
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+
+            i {
+                color: $light-grey;
+                vertical-align: middle;
+                margin-right: $margin-xs;
+            }
+        }
     }
 }
