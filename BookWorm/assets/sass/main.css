@@ -273,6 +273,8 @@ header {
   color: #40444f; }
   .heading.big {
     font-size: 3.5rem; }
+  .heading.medium {
+    font-size: 2.8rem; }
   .heading.small {
     font-size: 2.1rem; }
   .heading.mini {
@@ -313,7 +315,12 @@ section {
           width: 210px; }
   section.sm {
     padding: 50px 0; }
-  section h1.heading {
+  section.work {
+    padding: 0; }
+    section.work .header {
+      height: 400px;
+      max-height: 400px; }
+  section .heading {
     margin-bottom: 100px; }
   section .desc {
     font-size: 1.6rem;
@@ -322,6 +329,31 @@ section {
     color: #9a9ea8;
     font-size: 1.2rem;
     text-transform: uppercase; }
+  section #work-details .header {
+    display: block;
+    padding: 50px 0;
+    margin-bottom: 0; }
+  section #work-details .like-container {
+    top: -15px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+  section #work-details .container {
+    margin-top: -30px; }
+    section #work-details .container .heading {
+      margin-top: 65px;
+      margin-bottom: 50px;
+      text-align: center; }
+    section #work-details .container .text {
+      display: block;
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      line-height: 2.8rem;
+      font-size: 1.8rem;
+      color: #9a9ea8;
+      margin-bottom: 65px; }
 
 .container {
   margin-right: auto;
@@ -360,6 +392,59 @@ section {
   line-height: 30px;
   font-size: 1.2rem;
   border-radius: 0; }
+  .btn.like {
+    background-color: transparent;
+    box-shadow: none;
+    color: #9a9ea8;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: normal;
+    height: auto;
+    max-height: 30px; }
+    .btn.like.in-work {
+      height: 30px;
+      line-height: 30px;
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12); }
+    .btn.like .number-likes {
+      margin-left: 3px;
+      vertical-align: top;
+      -moz-transition: color 0.2s ease-in-out;
+      -o-transition: color 0.2s ease-in-out;
+      -webkit-transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out; }
+    .btn.like .icons {
+      display: inline-block;
+      width: 13.5px;
+      height: 13px;
+      position: relative;
+      vertical-align: sub; }
+      .btn.like .icons .icon-like-o,
+      .btn.like .icons .icon-like-full {
+        line-height: normal;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .btn.like .icons .icon-like-o {
+        opacity: 1;
+        -moz-transition: opacity 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out; }
+      .btn.like .icons .icon-like-full {
+        color: #ff7473;
+        opacity: 0;
+        -moz-transition: opacity 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out; }
+    .btn.like:hover i.icon-like-full, .btn.like:active i.icon-like-full, .btn.like:focus i.icon-like-full {
+      opacity: 1; }
+    .btn.like:hover i.icon-like-o, .btn.like:active i.icon-like-o, .btn.like:focus i.icon-like-o {
+      opacity: 0; }
+    .btn.like:hover .number-likes, .btn.like:active .number-likes, .btn.like:focus .number-likes {
+      color: #ff7473; }
   .btn.wide {
     padding: 0 20px; }
   .btn.normal {
@@ -371,6 +456,12 @@ section {
     .btn.line.black-and-white:hover, .btn.line.black-and-white:active, .btn.line.black-and-white:focus {
       background-color: #333333;
       border-color: #333333; }
+  .btn.round {
+    border-radius: 50px; }
+  .btn#compose-button {
+    position: fixed;
+    right: 50px;
+    bottom: 50px; }
   .btn.grey {
     background-color: rgba(0, 0, 0, 0.03) !important;
     box-shadow: none;
@@ -388,14 +479,11 @@ section {
       -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
       -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16); }
-  .btn.round {
-    border-radius: 50px; }
-  .btn#compose-button {
-    position: fixed;
-    right: 50px;
-    bottom: 50px; }
   .btn.red {
     background-color: #ff7473 !important; }
+  .btn.white {
+    background-color: #ffffff;
+    color: #9a9ea8; }
   .btn.btn-floating {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
@@ -461,51 +549,6 @@ section {
         color: #9a9ea8;
         text-transform: none;
         margin: 2px 0 0 0; }
-      .card.horizontal .card-action .like {
-        border: 0;
-        border-radius: 0;
-        background-color: transparent;
-        box-shadow: none;
-        color: #9a9ea8;
-        padding: 0;
-        font-size: 1.2rem;
-        line-height: normal;
-        height: auto; }
-        .card.horizontal .card-action .like:hover i.icon-like-full, .card.horizontal .card-action .like:active i.icon-like-full, .card.horizontal .card-action .like:focus i.icon-like-full {
-          opacity: 1; }
-        .card.horizontal .card-action .like:hover i.icon-like-o, .card.horizontal .card-action .like:active i.icon-like-o, .card.horizontal .card-action .like:focus i.icon-like-o {
-          opacity: 0; }
-        .card.horizontal .card-action .like:hover .number-likes, .card.horizontal .card-action .like:active .number-likes, .card.horizontal .card-action .like:focus .number-likes {
-          color: #ff7473; }
-        .card.horizontal .card-action .like .number-likes {
-          vertical-align: top;
-          -moz-transition: color 0.2s ease-in-out;
-          -o-transition: color 0.2s ease-in-out;
-          -webkit-transition: color 0.2s ease-in-out;
-          transition: color 0.2s ease-in-out; }
-        .card.horizontal .card-action .like .icons {
-          display: inline-block;
-          width: 13.5px;
-          height: 13px;
-          position: relative; }
-          .card.horizontal .card-action .like .icons .icon-like-o,
-          .card.horizontal .card-action .like .icons .icon-like-full {
-            position: absolute;
-            top: 0;
-            left: 0; }
-          .card.horizontal .card-action .like .icons .icon-like-o {
-            opacity: 1;
-            -moz-transition: opacity 0.2s ease-in-out;
-            -o-transition: opacity 0.2s ease-in-out;
-            -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out; }
-          .card.horizontal .card-action .like .icons .icon-like-full {
-            color: #ff7473;
-            opacity: 0;
-            -moz-transition: opacity 0.2s ease-in-out;
-            -o-transition: opacity 0.2s ease-in-out;
-            -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out; }
       .card.horizontal .card-action .read-more {
         padding: 0;
         font-size: 1.2rem; }
@@ -574,4 +617,15 @@ input.grey {
     cursor: pointer;
     padding: 0 10px;
     color: #9a9ea8; }
+
+.badge {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  padding: 0 20px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent; }
 

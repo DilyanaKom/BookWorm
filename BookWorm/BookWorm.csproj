@@ -1520,6 +1520,7 @@
     <Content Include="scripts\jquery-3.1.0.slim.min.js" />
     <Content Include="scripts\libs\rspv.min.js" />
     <Content Include="templates\bookDetails.html" />
+    <Content Include="templates\composeButton.html" />
     <Content Include="templates\header.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\library.html" />

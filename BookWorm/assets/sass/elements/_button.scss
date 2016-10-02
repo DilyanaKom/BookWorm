@@ -5,6 +5,72 @@
     font-size: 1.2rem;
     border-radius: 0;
 
+    &.like {
+        background-color: transparent;
+        box-shadow: none;
+        color: $light-grey;
+        padding: 0;
+        font-size: 1.2rem;
+        line-height: normal;
+        height: auto;
+        max-height: 30px;
+
+        &.in-work {
+            height: $button-height;
+            line-height: $button-height;
+            @include box-shadow(0, 2px, 5px, 0, transparentize($black, .88));
+        }
+
+        .number-likes {
+            margin-left: 3px;
+            vertical-align: top;
+            @include transition(color, .2s, ease-in-out);
+        }
+
+        .icons {
+            display: inline-block;
+            width: 13.5px;
+            height: 13px;
+            position: relative;
+            vertical-align: sub;
+
+            .icon-like-o,
+            .icon-like-full {
+                line-height: normal;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .icon-like-o {
+                opacity: 1;
+                @include transition(opacity, .2s, ease-in-out);
+            }
+
+            .icon-like-full {
+                color: $red;
+                opacity: 0;
+                @include transition(opacity, .2s, ease-in-out);
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            i.icon-like-full {
+                opacity: 1;
+            }
+
+            i.icon-like-o {
+                opacity: 0;
+            }
+
+            .number-likes {
+                color: $red;
+            }
+        }
+    }
+
     &.wide {
         padding: 0 $margin-sm;
     }
@@ -28,6 +94,16 @@
         }
     }
 
+    &.round {
+        border-radius: 50px;
+    }
+
+    &#compose-button {
+        position: fixed;
+        right: $margin-md + 10px;
+        bottom: $margin-md + 10px;
+    }
+
     &.grey {
         background-color: transparentize($black, .97) !important;
         box-shadow: none;
@@ -48,18 +124,13 @@
         }
     }
 
-    &.round {
-        border-radius: 50px;
-    }
-
-    &#compose-button {
-        position: fixed;
-        right: $margin-md + 10px;
-        bottom: $margin-md + 10px;
-    }
-
     &.red {
         background-color: $red !important;
+    }
+
+    &.white {
+        background-color: $white;
+        color: $light-grey;
     }
 
     &.btn-floating {

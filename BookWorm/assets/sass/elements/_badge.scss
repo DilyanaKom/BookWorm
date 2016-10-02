@@ -1,0 +1,11 @@
+﻿.badge {
+    display: inline-block;
+    height: $button-height;
+    line-height: $button-height;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    padding: 0 $margin-sm;
+    border: 1px solid $white;
+    color: $white;
+    background-color: transparent;
+}

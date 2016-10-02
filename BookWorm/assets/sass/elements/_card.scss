@@ -43,64 +43,6 @@
                 margin: 2px 0 0 0;
             }
 
-            .like {
-                border: 0;
-                border-radius: 0;
-                background-color: transparent;
-                box-shadow: none;
-                color: $light-grey;
-                padding: 0;
-                font-size: 1.2rem;
-                line-height: normal;
-                height: auto;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    i.icon-like-full {
-                        opacity: 1;
-                    }
-
-                    i.icon-like-o {
-                        opacity: 0;
-                    }
-
-                    .number-likes {
-                        color: $red;
-                    }
-                }
-
-                .number-likes {
-                    vertical-align: top;
-                    @include transition(color, .2s, ease-in-out);
-                }
-
-                .icons {
-                    display: inline-block;
-                    width: 13.5px;
-                    height: 13px;
-                    position: relative;
-
-                    .icon-like-o,
-                    .icon-like-full {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
-
-                    .icon-like-o {
-                        opacity: 1;
-                        @include transition(opacity, .2s, ease-in-out);
-                    }
-
-                    .icon-like-full {
-                        color: $red;
-                        opacity: 0;
-                        @include transition(opacity, .2s, ease-in-out);
-                    }
-                }
-            }
-
             .read-more {
                 padding: 0;
                 font-size: 1.2rem;

@@ -79,6 +79,7 @@ const sammyApp = Sammy('#main-content', function () {
         data.library.getById(this.params.id)
         .then(function (res) {
             book = res.Data;
+            console.log(book)
 
             return templates.get('bookDetails')
         })

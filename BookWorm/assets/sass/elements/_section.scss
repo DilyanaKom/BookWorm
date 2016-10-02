@@ -33,7 +33,7 @@
                 .dropdown-button {
                     margin-right: $margin-xs;
                 }
-                
+
                 input {
                     width: 210px;
                 }
@@ -45,7 +45,16 @@
         padding: $margin-md + 10px 0;
     }
 
-    h1.heading {
+    &.work {
+        padding: 0;
+
+        .header {
+            height: 400px;
+            max-height: 400px;
+        }
+    }
+
+    .heading {
         margin-bottom: $margin-xl;
     }
 
@@ -58,5 +67,42 @@
         color: $light-grey;
         font-size: 1.2rem;
         text-transform: uppercase;
+    }
+
+    #work-details {
+        .header {
+            display: block;
+            padding: $margin-md + 10px 0;
+            margin-bottom: 0;
+        }
+
+        .like-container {
+            top: -($button-height / 2);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: -$button-height;
+
+            .heading {
+                margin-top: $margin-md + $margin-sm + 5px;
+                margin-bottom: $margin-md + 10px;
+                text-align: center;
+            }
+
+            .text {
+                display: block;
+                max-width: 500px;
+                margin: auto;
+                text-align: center;
+                line-height: 2.8rem;
+                font-size: 1.8rem;
+                color: $light-grey;
+                margin-bottom: $margin-md + $margin-sm + 5px;
+            }
+        }
     }
 }
