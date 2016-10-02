@@ -130,6 +130,7 @@ const sammyApp = Sammy('#main-content', function () {
               };
               data.users.register(user)
               .then(function (user) {
+                  console.log(`${user} Hello`)
                   context.redirect("#/");
                   document.location.reload(true);
               });

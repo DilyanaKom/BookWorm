@@ -16,9 +16,10 @@ const data = (function () {
                         resolve(user);
                     }
                     else {
-                        alert(`${user.Message}`)
+                        $('.error').html(user.Message)
+                            .fadeIn(200)
+                            .removeClass('hidden');
                     }
-                    console.log(user);
                 }
             });
         });
@@ -40,9 +41,10 @@ const data = (function () {
                         resolve(user);
                     }
                     else {
-                        alert(`${user.Message}`)
+                        $('.error').html(user.Message)
+                            .fadeIn(200)
+                            .removeClass('hidden');
                     }
-                    console.log(user);
                 }
             });
         });

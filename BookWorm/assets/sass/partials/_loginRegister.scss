@@ -47,6 +47,14 @@
                     margin-bottom: $margin-xl;
                 }
             }
+
+            .error {
+                color: $red;
+                text-align: left;
+                margin-bottom: $margin-sm;
+                margin-top: 0;
+                font-size: 1.2rem;
+            }
         }
     }
 }

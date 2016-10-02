@@ -325,6 +325,13 @@ header {
         max-height: 125px;
         display: block;
         margin-bottom: 100px; }
+      #login .side .wrapper .error,
+      #register .side .wrapper .error {
+        color: #ff7473;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-top: 0;
+        font-size: 1.2rem; }
 
 .heading {
   margin: 0;
