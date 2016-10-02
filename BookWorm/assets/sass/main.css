@@ -280,6 +280,52 @@ header {
     z-index: 1;
     position: relative; }
 
+#login,
+#register {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/images/background-image.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+  #login .side,
+  #register .side {
+    max-width: 400px;
+    height: 100%;
+    display: table;
+    text-align: center;
+    padding: 50px; }
+    #login .side .wrapper,
+    #register .side .wrapper {
+      display: table-cell;
+      vertical-align: middle; }
+      #login .side .wrapper .heading,
+      #register .side .wrapper .heading {
+        margin-bottom: 40px; }
+      #login .side .wrapper .btn,
+      #register .side .wrapper .btn {
+        margin-top: 40px; }
+      #login .side .wrapper a,
+      #register .side .wrapper a {
+        display: block;
+        color: rgba(154, 158, 168, 0.7);
+        font-size: 1.2rem;
+        margin-top: 20px;
+        -moz-transition: color 0.2s ease-in-out;
+        -o-transition: color 0.2s ease-in-out;
+        -webkit-transition: color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out; }
+        #login .side .wrapper a:hover, #login .side .wrapper a:active, #login .side .wrapper a:focus,
+        #register .side .wrapper a:hover,
+        #register .side .wrapper a:active,
+        #register .side .wrapper a:focus {
+          color: #9a9ea8; }
+      #login .side .wrapper .logo img,
+      #register .side .wrapper .logo img {
+        max-height: 125px;
+        display: block;
+        margin-bottom: 100px; }
+
 .heading {
   margin: 0;
   font-size: 2.8rem;
@@ -471,6 +517,8 @@ section {
         vertical-align: middle;
         color: #9a9ea8;
         text-align: center; }
+  section#services .row .heading {
+    margin-bottom: 25px; }
 
 .container {
   margin-right: auto;
@@ -717,6 +765,13 @@ input.grey {
     color: #9a9ea8;
     vertical-align: middle;
     margin-right: 10px; }
+
+input.normal {
+  border-bottom: 2px solid #e9e9e9;
+  font-size: 1.2rem; }
+  input.normal:not([type]):focus:not([readonly]), input.normal[type=text]:focus:not([readonly]), input.normal[type=password]:focus:not([readonly]), input.normal[type=email]:focus:not([readonly]), input.normal[type=url]:focus:not([readonly]), input.normal[type=time]:focus:not([readonly]), input.normal[type=date]:focus:not([readonly]), input.normal[type=datetime]:focus:not([readonly]), input.normal[type=datetime-local]:focus:not([readonly]), input.normal[type=tel]:focus:not([readonly]), input.normal[type=number]:focus:not([readonly]), input.normal[type=search]:focus:not([readonly]), input.normal.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 2px solid #58c9b9;
+    box-shadow: none; }
 
 .search-form {
   display: inline-block;

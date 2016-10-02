@@ -33,6 +33,28 @@ input {
             margin-right: $margin-xs;
         }
     }
+
+    &.normal {
+        border-bottom: 2px solid $semi-grey;
+        font-size: 1.2rem;
+
+        &:not([type]):focus:not([readonly]),
+        &[type=text]:focus:not([readonly]),
+        &[type=password]:focus:not([readonly]),
+        &[type=email]:focus:not([readonly]),
+        &[type=url]:focus:not([readonly]),
+        &[type=time]:focus:not([readonly]),
+        &[type=date]:focus:not([readonly]),
+        &[type=datetime]:focus:not([readonly]),
+        &[type=datetime-local]:focus:not([readonly]),
+        &[type=tel]:focus:not([readonly]),
+        &[type=number]:focus:not([readonly]),
+        &[type=search]:focus:not([readonly]),
+        &.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 2px solid $green;
+            box-shadow: none;
+        }
+    }
 }
 
 .search-form {
@@ -40,7 +62,7 @@ input {
     width: 230px;
     position: relative;
 
-   .submit {
+    .submit {
         display: block;
         position: absolute;
         top: 0;

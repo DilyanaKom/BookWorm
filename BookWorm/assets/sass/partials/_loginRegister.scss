@@ -1,0 +1,52 @@
+﻿#login,
+#register {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../assets/images/background-image.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    .side {
+        max-width: 400px;
+        height: 100%;
+        display: table;
+        text-align: center;
+        padding: $margin-md + 10px;
+
+        .wrapper {
+            display: table-cell;
+            vertical-align: middle;
+
+            .heading {
+                margin-bottom: $margin-md;
+            }
+
+            .btn {
+                margin-top: $margin-md;
+            }
+
+            a {
+                display: block;
+                color: transparentize($light-grey, .3);
+                font-size: 1.2rem;
+                margin-top: $margin-sm;
+                @include transition(color, .2s, ease-in-out);
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $light-grey;
+                }
+            }
+
+            .logo {
+                img {
+                    max-height: 125px;
+                    display: block;
+                    margin-bottom: $margin-xl;
+                }
+            }
+        }
+    }
+}
