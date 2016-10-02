@@ -7,7 +7,25 @@
     background-position: center;
     overflow: hidden;
 
+    .intro {
+        position: absolute;
+        bottom: $margin-xl * 2;
+        left: $margin-xl;
+
+        .heading {
+            color: $white;
+            font-size: 4.5rem;
+        }
+
+        .sub-heading {
+            font-size: 1.8rem;
+            margin-top: $margin-xs;
+            color: transparentize($white, .3);
+        }
+    }
+
     .side {
+        width: 400px;
         max-width: 400px;
         height: 100%;
         display: table;

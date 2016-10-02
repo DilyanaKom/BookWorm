@@ -288,8 +288,23 @@ header {
   background-size: cover;
   background-position: center;
   overflow: hidden; }
+  #login .intro,
+  #register .intro {
+    position: absolute;
+    bottom: 200px;
+    left: 100px; }
+    #login .intro .heading,
+    #register .intro .heading {
+      color: #ffffff;
+      font-size: 4.5rem; }
+    #login .intro .sub-heading,
+    #register .intro .sub-heading {
+      font-size: 1.8rem;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.7); }
   #login .side,
   #register .side {
+    width: 400px;
     max-width: 400px;
     height: 100%;
     display: table;
