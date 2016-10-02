@@ -4,6 +4,10 @@
     text-align: center;
     background-color: $white;
 
+    &.full {
+        height: 100%;
+    }
+
     &#app-section {
         text-align: left;
         background-color: $super-light-grey;
