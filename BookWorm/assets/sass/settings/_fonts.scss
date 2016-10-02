@@ -42,6 +42,18 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-image:before {
+    content: "\e915";
+}
+
+.icon-check:before {
+    content: "\e913";
+}
+
+.icon-close:before {
+    content: "\e914";
+}
+
 .icon-arrow-down:before {
     content: "\e900";
 }

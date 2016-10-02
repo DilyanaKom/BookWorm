@@ -136,7 +136,7 @@ const sammyApp = Sammy('#main-content', function () {
                 $('select').material_select();
                 $('.select-wrapper .caret').remove();
                 $('.modal-trigger').leanModal();
-            }, 600);
+            }, 1000);
         } else {
             this.redirect("#/home");
         }

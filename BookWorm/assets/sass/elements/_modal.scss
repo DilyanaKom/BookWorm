@@ -1,0 +1,120 @@
+﻿.modal {
+    top: 0 !important;
+    bottom: 0;
+    max-height: 500px;
+    max-width: 600px;
+    border-radius: 0;
+    display: flex !important;
+    flex-direction: column;
+    opacity: 0;
+    background-color: $white;
+
+    .modal-content {
+        padding: $margin-md + 10px $margin-sm;
+        position: relative;
+
+        .heading {
+            margin-bottom: 0 !important;
+        }
+
+        .modal-close {
+            &.icon {
+                font-family: 'bookworm';
+                font-size: 1rem;
+                color: $light-grey;
+                position: absolute;
+                top: $margin-sm + 5px;
+                right: $margin-sm + 5px;
+                @include transition(opacity, .2s, ease-in-out);
+
+                &:hover,
+                &:active,
+                &:focus {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        flex: 1;
+        background-color: $super-light-grey;
+
+        .tabs-wrapper {
+            height: 100%;
+
+            .row {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+
+                & > .col {
+                    padding: 0;
+                }
+            }
+
+            .tab {
+                a {
+                    font-size: 1.1rem;
+                    color: $light-grey;
+
+                    &.active {
+                        color: $red;
+                    }
+
+                    i {
+                        font-size: .9rem;
+                    }
+                }
+            }
+
+            .tab-content {
+                height: calc(100% - 48px);
+                overflow-y: auto;
+
+                .option {
+                    padding: $margin-sm + $margin-xs;
+
+                    label {
+                        display: block;
+                        font-size: 1.4rem;
+                        color: $dark-blue;
+                        padding: 0;
+
+                        &::before {
+                            right: 0;
+                            left: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        position: relative;
+        bottom: 0;
+        max-height: 50px;
+        padding: 0;
+
+        .row {
+            width: 100%;
+            margin: 0;
+
+            a {
+                color: $white;
+                margin: 0;
+                height: 100%;
+                line-height: 50px;
+
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.lean-overlay {
+    opacity: .3 !important;
+}
