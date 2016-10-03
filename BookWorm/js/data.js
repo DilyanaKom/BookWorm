@@ -71,7 +71,7 @@ const data = (function () {
 
     function getLibrary() {
         var promise = new Promise(function (resolve, reject) {
-            $.getJSON("api/work/WorkLibrary?offset=0&count=1000", function (books) {
+            $.getJSON("http://bookworm-1.apphb.com/api/work/WorkLibrary?offset=0&count=1000", function (books) {
                 resolve(books);
             })
         })
@@ -81,7 +81,7 @@ const data = (function () {
     function getMyLibrary() {
         var promise = new Promise(function (resolve, reject) {
             $.ajax({
-                url: '/api/work/myWorkLibrary?offset=0&count=1000',
+                url: 'http://bookworm-1.apphb.com/api/work/myWorkLibrary?offset=0&count=1000',
                 method: 'GET',
                 data: JSON.stringify(),
                 headers: {
@@ -98,7 +98,7 @@ const data = (function () {
 
     function bookById(id) {
         var promise = new Promise(function (resolve, reject) {
-            $.getJSON(`/api/work/WorkDetails?workId=${id}`, function (res) {
+            $.getJSON(`http://bookworm-1.apphb.com/api/work/WorkDetails?workId=${id}`, function (res) {
                 resolve(res);
             })
         })
