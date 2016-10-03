@@ -71,7 +71,7 @@ const data = (function () {
 
     function getLibrary() {
         var promise = new Promise(function (resolve, reject) {
-            $.getJSON("api/work/WorkLibrary?offset=3&count=3", function (books) {
+            $.getJSON("api/work/WorkLibrary?offset=0&count=1000", function (books) {
                 resolve(books);
             })
         })
@@ -81,7 +81,7 @@ const data = (function () {
     function getMyLibrary() {
         var promise = new Promise(function (resolve, reject) {
             $.ajax({
-                url: '/api/work/myWorkLibrary?offset=3&count=3',
+                url: '/api/work/myWorkLibrary?offset=0&count=1000',
                 method: 'GET',
                 data: JSON.stringify(),
                 headers: {
